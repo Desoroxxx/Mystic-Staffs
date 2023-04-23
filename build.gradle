@@ -1,0 +1,83 @@
+import jdk.internal.dynalink.linker.LinkerServices
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name 'Forge'
+            url 'https://maven.minecraftforge.net'
+        }
+    }
+    dependencies {
+        classpath 'com.anatawa12.forge:ForgeGradle:2.3-1.0.7'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+// Add version to the jar name
+version project.version
+
+minecraft {
+    version = '1.12.2-14.23.5.2847'
+    mappings = 'stable_39'
+    runDir = 'run'
+
+    def args = ['-Dforge.logging.console.level=debug']
+
+    replace('@ID@', project.id)
+    replace('@VERSION@', project.version)
+    replaceIn('ModReference.java')
+}
+
+runClient {
+    args '--username=Dev'
+}
+
+// Replace id, and version in `mcmod.info`
+processResources {
+    inputs.property 'id', project.id
+    inputs.property 'version', project.version
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'id': project.id, 'version': project.version
+    }
+}
+
+// Create configuration to include embedded dependencies into the jar
+configurations {
+    implementation
+    compile.extendsFrom(embed)
+}
+
+repositories {
+    maven {
+        name 'Curse Maven'
+        url "https://cursemaven.com"
+    }
+}
+
+dependencies {
+    implementation 'net.jafama:jafama:2.+'
+    embed 'net.jafama:jafama:2.+'
+
+    deobfCompile 'curse.maven:LLibrary-243298:2504999'
+    deobfCompile 'curse.maven:MowziesMobs-250498:3048685'
+
+    deobfCompile 'curse.maven:ElenaiDodge2-442962:3343308'
+}
+
+jar {
+    // Add all embedded dependencies into the jar
+    from(configurations.embed.collect {it.isDirectory() ? it : zipTree(it)})
+
+    manifest.attributes([
+            'ModSide': 'BOTH',
+    ])
+}
+
+idea {
+    module {
+        excludeDirs = [file(".github"), file(".gradle"), file(".idea"), file("build"), file("gradle"), file("run")]
+    }
+}

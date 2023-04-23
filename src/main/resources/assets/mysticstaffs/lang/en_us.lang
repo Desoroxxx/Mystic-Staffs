@@ -1,0 +1,61 @@
+# Creative Tabs
+
+itemGroup.staffs=Staffs
+
+# Items
+
+item.path_staff.name=Path Staff
+item.ice_ball_staff.name=Ice Ball Staff
+item.sunstrike_staff.name=Sunstrike Staff
+item.solar_beam_staff.name=Solar Beam Staff
+
+# Configuration
+
+mysticstaffs.general.common=Common
+mysticstaffs.general.common.tooltip=Common configuration for Mystic Staffs
+
+mysticstaffs.general.common.pathstaff=Path Staff
+mysticstaffs.general.common.pathstaff.tooltip=Configuration for the Path Staff
+mysticstaffs.general.common.pathstaff.durability=Durability
+mysticstaffs.general.common.pathstaff.durability.tooltip=Max durability of the Path Staff, 0 means infinite durability
+mysticstaffs.general.common.pathstaff.cooldown=Cooldown
+mysticstaffs.general.common.pathstaff.cooldown.tooltip=Cooldown between uses of the Path Staff in ticks
+mysticstaffs.general.common.pathstaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.pathstaff.featherconsumption.tooltip=Feather consumption per use of the Path Staff
+mysticstaffs.general.common.pathstaff.lifetime=Lifetime
+mysticstaffs.general.common.pathstaff.lifetime.tooltip=Lifetime of the path in ticks
+mysticstaffs.general.common.pathstaff.length=Length
+mysticstaffs.general.common.pathstaff.length.tooltip=Length of the path in blocks
+
+mysticstaffs.general.common.iceballstaff=Iceball Staff
+mysticstaffs.general.common.iceballstaff.tooltip=Configuration for the Iceball Staff
+mysticstaffs.general.common.iceballstaff.durability=Durability
+mysticstaffs.general.common.iceballstaff.durability.tooltip=Max durability of the Iceball Staff, 0 means infinite durability
+mysticstaffs.general.common.iceballstaff.cooldown=Cooldown
+mysticstaffs.general.common.iceballstaff.cooldown.tooltip=Cooldown between uses of the Iceball Staff in ticks
+mysticstaffs.general.common.iceballstaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.iceballstaff.featherconsumption.tooltip=Feather consumption per use of the Iceball Staff
+
+mysticstaffs.general.common.sunstrikestaff=Sunstrike Staff
+mysticstaffs.general.common.sunstrikestaff.tooltip=Configuration for the Sunstrike Staff
+mysticstaffs.general.common.sunstrikestaff.durability=Durability
+mysticstaffs.general.common.sunstrikestaff.durability.tooltip=Max durability of the Sunstrike Staff, 0 means infinite
+mysticstaffs.general.common.sunstrikestaff.cooldown=Cooldown
+mysticstaffs.general.common.sunstrikestaff.cooldown.tooltip=Cooldown between uses of the Sunstrike Staff in ticks
+mysticstaffs.general.common.sunstrikestaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.sunstrikestaff.featherconsumption.tooltip=Feather consumption per use of the Sunstrike Staff
+mysticstaffs.general.common.sunstrikestaff.amount=Amount
+mysticstaffs.general.common.sunstrikestaff.amount.tooltip=Amount of strikes
+mysticstaffs.general.common.sunstrikestaff.radius=Radius
+mysticstaffs.general.common.sunstrikestaff.radius.tooltip=Radius around the target (the block you where looking at when using the Sunstrike Staff) where to send strikes
+
+mysticstaffs.general.common.solarbeamstaff=Solar Beam Staff
+mysticstaffs.general.common.solarbeamstaff.tooltip=Configuration for the Solar Beam Staff
+mysticstaffs.general.common.solarbeamstaff.durability=Durability
+mysticstaffs.general.common.solarbeamstaff.durability.tooltip=Max durability of the Solar Beam Staff, 0 means infinite
+mysticstaffs.general.common.solarbeamstaff.cooldown=Cooldown
+mysticstaffs.general.common.solarbeamstaff.cooldown.tooltip=Cooldown between uses of the Solar Beam Staff in ticks
+mysticstaffs.general.common.solarbeamstaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.solarbeamstaff.featherconsumption.tooltip=Feather consumption per use of the Solar Beam Staff
+mysticstaffs.general.common.solarbeamstaff.duration=Duration
+mysticstaffs.general.common.solarbeamstaff.duration.tooltip=Duration of the Solar Beam in ticks

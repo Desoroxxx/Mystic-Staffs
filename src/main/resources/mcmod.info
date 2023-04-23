@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "${id}",
+    "name": "Mystic Staffs",
+    "description": "",
+    "version": "${version}",
+    "mcversion": "1.12.2",
+    "authorList": ["Red Studio"],
+    "credits": "Desoroxxx",
+    "logoFile": "assets/mysticstaffs/textures/items/staff.png"
+  }
+]

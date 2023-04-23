@@ -1,0 +1,26 @@
+{
+  "magic": {
+    "category": "master",
+    "sounds": [ "mysticstaffs:magic" ]
+  },
+  "wind": {
+	"category": "master",
+	"sounds": [ "mysticstaffs:wind" ]
+  },
+  "dark": {
+	"category": "master",
+	"sounds": [ "mysticstaffs:dark" ]
+  },
+  "gust": {
+	"category": "master",
+	"sounds": [ "mysticstaffs:gust" ]
+  },
+  "resurrection": {
+	"category": "master",
+	"sounds": [ "mysticstaffs:resurrection" ]
+  },
+  "glow": {
+	"category": "master",
+	"sounds": [ "mysticstaffs:glow" ]
+  }
+}
