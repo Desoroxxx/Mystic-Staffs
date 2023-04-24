@@ -5,6 +5,7 @@ import com.elenai.elenaidodge2.api.FeathersHelper;
 import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
 import io.redstudioragnarok.mysticstaffs.utils.MysticStaffsUtils;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
@@ -12,7 +13,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class PathStaff extends Staff {
+
+    private final Queue<EntityBoulder> boulderQueue = new LinkedList<>();
 
     public PathStaff() {
         super(MysticStaffsConfig.common.pathStaff.durability);
@@ -55,12 +61,10 @@ public class PathStaff extends Staff {
                 boulder.setPosition(player.posX + x * distance, (player.posY - yOffset) + y * distance, player.posZ + z * distance);
 
                 if (world.getBlockState(boulder.getPosition()).getMaterial() == Material.AIR)
-                    world.spawnEntity(boulder);
+                    boulderQueue.add(boulder);
             }
 
             player.fallDistance = -9;
-
-            MysticStaffsUtils.spawnExplosionParticleAtEntity(player, 100);
 
             world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("element", "gust")), SoundCategory.MASTER, 2.0F, 0.7F);
 
@@ -68,5 +72,17 @@ public class PathStaff extends Staff {
         }
 
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
+    }
+
+    @Override
+    public void onUpdate(ItemStack itemStack, World world, Entity entity, int itemSlot, boolean isSelected) {
+        if (!world.isRemote) {
+            EntityBoulder boulder = boulderQueue.poll();
+
+            if (boulder != null) {
+                world.spawnEntity(boulder);
+                MysticStaffsUtils.spawnExplosionParticleAtEntity(boulder, 25);
+            }
+        }
     }
 }
