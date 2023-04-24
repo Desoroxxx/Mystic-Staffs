@@ -1,5 +1,6 @@
 package io.redstudioragnarok.mysticstaffs.utils;
 
+import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
 import net.jafama.FastMath;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -49,7 +50,7 @@ public class MysticStaffsUtils {
         final float cosPitch = -MathHelper.cos(-pitch * 0.017453292F);
         final float sinPitch = MathHelper.sin(-pitch * 0.017453292F);
 
-        final float reachMultiplier = 100;
+        final float reachMultiplier = MysticStaffsConfig.common.sunstrikeStaff.reachMultiplier;
 
         final Vec3d endPosition = startPosition.add((sinYaw * cosPitch) * reachMultiplier, sinPitch * reachMultiplier, (cosYaw * cosPitch) * reachMultiplier);
 
