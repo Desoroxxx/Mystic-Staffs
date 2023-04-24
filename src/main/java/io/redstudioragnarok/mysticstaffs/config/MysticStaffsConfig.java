@@ -24,10 +24,10 @@ public class MysticStaffsConfig {
             @Config.RequiresMcRestart
             public int durability = 32;
 
-            public int cooldown = 20;
+            public int cooldown = 128;
             public int featherConsumption = 1;
 
-            public int lifetime = 100;
+            public int lifetime = 256;
             public int length = 10;
         }
 
@@ -36,7 +36,7 @@ public class MysticStaffsConfig {
             @Config.RequiresMcRestart
             public int durability = 32;
 
-            public int cooldown = 20;
+            public int cooldown = 128;
             public int featherConsumption = 1;
         }
 
@@ -45,11 +45,13 @@ public class MysticStaffsConfig {
             @Config.RequiresMcRestart
             public int durability = 32;
 
-            public int cooldown = 20;
+            public int cooldown = 64;
             public int featherConsumption = 1;
 
             public int amount = 4;
             public int radius = 2;
+            public int delay = 6;
+            public int reachMultiplier = 40;
         }
 
         public static class SolarBeamStaffConfig {
@@ -57,7 +59,7 @@ public class MysticStaffsConfig {
             @Config.RequiresMcRestart
             public int durability = 32;
 
-            public int cooldown = 20;
+            public int cooldown = 110;
             public int featherConsumption = 1;
 
             public int duration = 55;
