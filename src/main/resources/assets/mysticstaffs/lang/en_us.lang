@@ -48,6 +48,10 @@ mysticstaffs.general.common.sunstrikestaff.amount=Amount
 mysticstaffs.general.common.sunstrikestaff.amount.tooltip=Amount of strikes
 mysticstaffs.general.common.sunstrikestaff.radius=Radius
 mysticstaffs.general.common.sunstrikestaff.radius.tooltip=Radius around the target (the block you where looking at when using the Sunstrike Staff) where to send strikes
+mysticstaffs.general.common.sunstrikestaff.delay=Delay
+mysticstaffs.general.common.sunstrikestaff.delay.tooltip=Max delay between each strikes
+mysticstaffs.general.common.sunstrikestaff.reachmultiplier=Reach Multiplier
+mysticstaffs.general.common.sunstrikestaff.reachmultiplier.tooltip=Reach multiplier of the Sunstrike Staff
 
 mysticstaffs.general.common.solarbeamstaff=Solar Beam Staff
 mysticstaffs.general.common.solarbeamstaff.tooltip=Configuration for the Solar Beam Staff
