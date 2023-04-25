@@ -6,7 +6,9 @@ import com.elenai.elenaidodge2.api.FeathersHelper;
 import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
@@ -24,6 +26,8 @@ public class SolarBeamStaff extends Staff {
 
         if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.solarBeamStaff.featherConsumption) {
             MowziesMobs.NETWORK_WRAPPER.sendToServer(new MessagePlayerSolarBeam());
+
+            player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 55, MysticStaffsConfig.common.solarBeamStaff.slowness));
 
             return useItem(itemStack, player, MysticStaffsConfig.common.solarBeamStaff.cooldown, MysticStaffsConfig.common.solarBeamStaff.featherConsumption);
         }
