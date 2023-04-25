@@ -22,9 +22,9 @@ public class MysticStaffsConfig {
         public static class PathStaffConfig {
 
             @Config.RequiresMcRestart
-            public int durability = 32;
+            public int durability = 128;
 
-            public int cooldown = 128;
+            public int cooldown = 32;
             public int featherConsumption = 1;
 
             public int lifetime = 256;
@@ -34,18 +34,18 @@ public class MysticStaffsConfig {
         public static class IceballStaffConfig {
 
             @Config.RequiresMcRestart
-            public int durability = 32;
+            public int durability = 128;
 
-            public int cooldown = 128;
+            public int cooldown = 32;
             public int featherConsumption = 1;
         }
 
         public static class SunstrikeStaffConfig {
 
             @Config.RequiresMcRestart
-            public int durability = 32;
+            public int durability = 64;
 
-            public int cooldown = 64;
+            public int cooldown = 32;
             public int featherConsumption = 1;
 
             public int amount = 4;
@@ -57,12 +57,10 @@ public class MysticStaffsConfig {
         public static class SolarBeamStaffConfig {
 
             @Config.RequiresMcRestart
-            public int durability = 32;
+            public int durability = 64;
 
             public int cooldown = 110;
             public int featherConsumption = 1;
-
-            public int duration = 55;
         }
     }
 

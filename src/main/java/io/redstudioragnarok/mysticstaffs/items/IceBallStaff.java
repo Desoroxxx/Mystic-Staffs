@@ -39,6 +39,8 @@ public class IceBallStaff extends Staff {
             return useItem(itemStack, player, MysticStaffsConfig.common.iceBallStaff.cooldown, MysticStaffsConfig.common.iceBallStaff.featherConsumption);
         }
 
+        player.swingArm(hand);
+
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
 }

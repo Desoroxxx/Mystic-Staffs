@@ -71,6 +71,8 @@ public class PathStaff extends Staff {
             return useItem(itemStack, player, MysticStaffsConfig.common.pathStaff.cooldown, MysticStaffsConfig.common.pathStaff.featherConsumption);
         }
 
+        player.swingArm(hand);
+
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
 

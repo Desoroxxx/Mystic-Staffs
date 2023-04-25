@@ -14,8 +14,6 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -25,7 +23,7 @@ public class SunstrikeStaff extends Staff {
 
     private static final Random random = new Random();
 
-    private Queue<EntitySunstrike> sunstrikeQueue = new LinkedList<>();
+    private final Queue<EntitySunstrike> sunstrikeQueue = new LinkedList<>();
 
     private int delay = 0;
 
@@ -55,6 +53,8 @@ public class SunstrikeStaff extends Staff {
                 return useItem(itemStack, player, MysticStaffsConfig.common.sunstrikeStaff.cooldown, MysticStaffsConfig.common.sunstrikeStaff.featherConsumption);
             }
         }
+
+        player.swingArm(hand);
 
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
