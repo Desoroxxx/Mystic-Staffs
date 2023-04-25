@@ -8,9 +8,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
@@ -49,6 +47,8 @@ public class SunstrikeStaff extends Staff {
 
                     sunstrikeQueue.add(new EntitySunstrike(world, player, target.getX() + offsetX, target.getY(), target.getZ() + offsetZ));
                 }
+
+                world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "glow")), SoundCategory.MASTER, 2.0F, 0.7F);
 
                 return useItem(itemStack, player, MysticStaffsConfig.common.sunstrikeStaff.cooldown, MysticStaffsConfig.common.sunstrikeStaff.featherConsumption);
             }
