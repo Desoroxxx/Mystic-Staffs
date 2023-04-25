@@ -61,5 +61,3 @@ mysticstaffs.general.common.solarbeamstaff.cooldown=Cooldown
 mysticstaffs.general.common.solarbeamstaff.cooldown.tooltip=Cooldown between uses of the Solar Beam Staff in ticks
 mysticstaffs.general.common.solarbeamstaff.featherconsumption=Feather Consumption
 mysticstaffs.general.common.solarbeamstaff.featherconsumption.tooltip=Feather consumption per use of the Solar Beam Staff
-mysticstaffs.general.common.solarbeamstaff.duration=Duration
-mysticstaffs.general.common.solarbeamstaff.duration.tooltip=Duration of the Solar Beam in ticks
