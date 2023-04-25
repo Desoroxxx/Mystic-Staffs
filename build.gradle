@@ -59,11 +59,8 @@ repositories {
     maven {
         name 'Curse Maven'
         url "https://cursemaven.com"
-        maven {
-            url "https://cursemaven.com"
-            content {
-                includeGroup "curse.maven"
-            }
+        content {
+            includeGroup "curse.maven"
         }
     }
 }

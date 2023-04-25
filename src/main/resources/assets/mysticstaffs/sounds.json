@@ -1,26 +1,20 @@
 {
   "magic": {
-    "category": "master",
     "sounds": [ "mysticstaffs:magic" ]
   },
   "wind": {
-	"category": "master",
-	"sounds": [ "mysticstaffs:wind" ]
+    "sounds": [ "mysticstaffs:wind" ]
   },
   "dark": {
-	"category": "master",
-	"sounds": [ "mysticstaffs:dark" ]
+    "sounds": [ "mysticstaffs:dark" ]
   },
   "gust": {
-	"category": "master",
-	"sounds": [ "mysticstaffs:gust" ]
+    "sounds": [ "mysticstaffs:gust" ]
   },
   "resurrection": {
-	"category": "master",
-	"sounds": [ "mysticstaffs:resurrection" ]
+    "sounds": [ "mysticstaffs:resurrection" ]
   },
   "glow": {
-	"category": "master",
-	"sounds": [ "mysticstaffs:glow" ]
+    "sounds": [ "mysticstaffs:glow" ]
   }
 }
