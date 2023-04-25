@@ -83,7 +83,7 @@ public class PathStaff extends Staff {
 
             if (boulder != null) {
                 world.spawnEntity(boulder);
-                MysticStaffsUtils.spawnExplosionParticleAtEntity(boulder, 25);
+                MysticStaffsUtils.spawnParticleAtEntity(EnumParticleTypes.EXPLOSION_NORMAL, boulder, 25);
             }
         }
     }

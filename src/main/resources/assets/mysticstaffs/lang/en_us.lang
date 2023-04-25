@@ -8,6 +8,9 @@ item.path_staff.name=Path Staff
 item.ice_ball_staff.name=Ice Ball Staff
 item.sunstrike_staff.name=Sunstrike Staff
 item.solar_beam_staff.name=Solar Beam Staff
+item.invisibility_staff.name=Invisibility Staff
+item.heal_staff=Heal Staff
+item.fire_staff=Fire Staff
 
 # Configuration
 
@@ -61,3 +64,40 @@ mysticstaffs.general.common.solarbeamstaff.cooldown=Cooldown
 mysticstaffs.general.common.solarbeamstaff.cooldown.tooltip=Cooldown between uses of the Solar Beam Staff in ticks
 mysticstaffs.general.common.solarbeamstaff.featherconsumption=Feather Consumption
 mysticstaffs.general.common.solarbeamstaff.featherconsumption.tooltip=Feather consumption per use of the Solar Beam Staff
+mysticstaffs.general.common.solarbeamstaff.slowness=Slowness
+mysticstaffs.general.common.solarbeamstaff.slowness.tooltip=The amount of slowness to give to the player when using the Solar Beam Staff
+
+mysticstaffs.general.common.invisibilitystaff=Invisibility Staff
+mysticstaffs.general.common.invisibilitystaff.tooltip=Configuration for the Invisibility Staff
+mysticstaffs.general.common.invisibilitystaff.durability=Durability
+mysticstaffs.general.common.invisibilitystaff.durability.tooltip=Max durability of the Invisibility Staff, 0 means infinite
+mysticstaffs.general.common.invisibilitystaff.cooldown=Cooldown
+mysticstaffs.general.common.invisibilitystaff.cooldown.tooltip=Cooldown between uses of the Invisibility Staff in ticks
+mysticstaffs.general.common.invisibilitystaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.invisibilitystaff.featherconsumption.tooltip=Feather consumption per use of the Invisibility Staff
+mysticstaffs.general.common.invisibilitystaff.duration=Duration
+mysticstaffs.general.common.invisibilitystaff.duration.tooltip=Duration of the Invisibility Staff effect in ticks
+
+mysticstaffs.general.common.healstaff=Heal Staff
+mysticstaffs.general.common.healstaff.tooltip=Configuration for the Heal Staff
+mysticstaffs.general.common.healstaff.durability=Durability
+mysticstaffs.general.common.healstaff.durability.tooltip=Max durability of the Heal Staff, 0 means infinite
+mysticstaffs.general.common.healstaff.cooldown=Cooldown
+mysticstaffs.general.common.healstaff.cooldown.tooltip=Cooldown between uses of the Heal Staff in ticks
+mysticstaffs.general.common.healstaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.healstaff.featherconsumption.tooltip=Feather consumption per use of the Heal Staff
+mysticstaffs.general.common.healstaff.range=Range
+mysticstaffs.general.common.healstaff.range.tooltip=Range of the Heal Staff
+mysticstaffs.general.common.healstaff.strength=Strength
+mysticstaffs.general.common.healstaff.strength.tooltip=Strength of the Heal Staff effect
+
+mysticstaffs.general.common.firestaff=Fire Staff
+mysticstaffs.general.common.firestaff.tooltip=Configuration for the Fire Staff
+mysticstaffs.general.common.firestaff.durability=Durability
+mysticstaffs.general.common.firestaff.durability.tooltip=Max durability of the Fire Staff, 0 means infinite
+mysticstaffs.general.common.firestaff.cooldown=Cooldown
+mysticstaffs.general.common.firestaff.cooldown.tooltip=Cooldown between uses of the Fire Staff in ticks
+mysticstaffs.general.common.firestaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.firestaff.featherconsumption.tooltip=Feather consumption per use of the Fire Staff
+mysticstaffs.general.common.firestaff.range=Range
+mysticstaffs.general.common.firestaff.range.tooltip=Range of the Fire Staff

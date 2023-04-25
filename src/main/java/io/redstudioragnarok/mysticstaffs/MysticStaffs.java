@@ -1,10 +1,7 @@
 package io.redstudioragnarok.mysticstaffs;
 
 import io.redstudioragnarok.mysticstaffs.creativetab.StaffsTab;
-import io.redstudioragnarok.mysticstaffs.items.IceBallStaff;
-import io.redstudioragnarok.mysticstaffs.items.PathStaff;
-import io.redstudioragnarok.mysticstaffs.items.SolarBeamStaff;
-import io.redstudioragnarok.mysticstaffs.items.SunstrikeStaff;
+import io.redstudioragnarok.mysticstaffs.items.*;
 import io.redstudioragnarok.mysticstaffs.utils.ModReference;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -33,7 +30,7 @@ public class MysticStaffs {
 
     public static final StaffsTab staffsTab = new StaffsTab();
 
-    public static Item pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff;
+    public static Item pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff, invisibilityStaff, healStaff, fireStaff;
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> itemRegistryEvent) {
@@ -41,8 +38,11 @@ public class MysticStaffs {
         iceBallStaff = new IceBallStaff().setTranslationKey("ice_ball_staff").setRegistryName(ModReference.id, "ice_ball_staff");
         sunstrikeStaff = new SunstrikeStaff().setTranslationKey("sunstrike_staff").setRegistryName(ModReference.id, "sunstrike_staff");
         solarBeamStaff = new SolarBeamStaff().setTranslationKey("solar_beam_staff").setRegistryName(ModReference.id, "solar_beam_staff");
+        invisibilityStaff = new InvisibilityStaff().setTranslationKey("invisibility_staff").setRegistryName(ModReference.id, "invisibility_staff");
+        healStaff = new HealStaff().setTranslationKey("heal_staff").setRegistryName(ModReference.id, "heal_staff");
+        fireStaff = new FireStaff().setTranslationKey("fire_staff").setRegistryName(ModReference.id, "fire_staff");
 
-        itemRegistryEvent.getRegistry().registerAll(pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff);
+        itemRegistryEvent.getRegistry().registerAll(pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff, invisibilityStaff, healStaff, fireStaff);
     }
 
     @SubscribeEvent
@@ -52,5 +52,8 @@ public class MysticStaffs {
         ModelLoader.setCustomModelResourceLocation(iceBallStaff, 0, new ModelResourceLocation(iceBallStaff.delegate.name(), "inventory"));
         ModelLoader.setCustomModelResourceLocation(sunstrikeStaff, 0, new ModelResourceLocation(sunstrikeStaff.delegate.name(), "inventory"));
         ModelLoader.setCustomModelResourceLocation(solarBeamStaff, 0, new ModelResourceLocation(solarBeamStaff.delegate.name(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(invisibilityStaff, 0, new ModelResourceLocation(invisibilityStaff.delegate.name(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(healStaff, 0, new ModelResourceLocation(healStaff.delegate.name(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(fireStaff, 0, new ModelResourceLocation(fireStaff.delegate.name(), "inventory"));
     }
 }

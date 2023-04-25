@@ -18,18 +18,19 @@ public class MysticStaffsUtils {
     public static final Random random = new Random();
 
     /**
-     * Spawns an explosion particle effect around the given entity in the world.
+     * Spawns a particle effect around the given entity in the world.
      *
+     * @param particle The particle to spawn
      * @param entity The entity around which to spawn the particle effect
      * @param amount The number of particles to spawn
      */
-    public static void spawnExplosionParticleAtEntity(final Entity entity, final int amount) {
+    public static void spawnParticleAtEntity(final EnumParticleTypes particle, final Entity entity, final int amount) {
         final double velocity = random.nextGaussian() / 8;
         final double xOffset = random.nextGaussian() / 12;
         final double yOffset = random.nextGaussian() / 12;
         final double zOffset = random.nextGaussian() / 12;
 
-        ((WorldServer) entity.getEntityWorld()).spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, entity.posX, entity.posY, entity.posZ, amount, xOffset, yOffset, zOffset, velocity);
+        ((WorldServer) entity.getEntityWorld()).spawnParticle(particle, entity.posX, entity.posY, entity.posZ, amount, xOffset, yOffset, zOffset, MathHelper.clamp(velocity, 0.06, 1));
     }
 
     /**

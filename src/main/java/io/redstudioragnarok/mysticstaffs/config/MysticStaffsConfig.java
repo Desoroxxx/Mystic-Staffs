@@ -19,6 +19,9 @@ public class MysticStaffsConfig {
         public final IceballStaffConfig iceBallStaff = new IceballStaffConfig();
         public final SunstrikeStaffConfig sunstrikeStaff = new SunstrikeStaffConfig();
         public final SolarBeamStaffConfig solarBeamStaff = new SolarBeamStaffConfig();
+        public final InvisibilityStaffConfig invisibilityStaff = new InvisibilityStaffConfig();
+        public final HealStaffConfig healStaff = new HealStaffConfig();
+        public final FireStaffConfig fireStaff = new FireStaffConfig();
 
         public static class PathStaffConfig {
 
@@ -62,6 +65,42 @@ public class MysticStaffsConfig {
 
             public int cooldown = 110;
             public int featherConsumption = 1;
+
+            public int slowness = 1;
+        }
+
+        public static class InvisibilityStaffConfig {
+
+            @Config.RequiresMcRestart
+            public int durability = 128;
+
+            public int cooldown = 1800;
+            public int featherConsumption = 6;
+
+            public int duration = 1200;
+        }
+
+        public static class HealStaffConfig {
+
+            @Config.RequiresMcRestart
+            public int durability = 256;
+
+            public int cooldown = 30;
+            public int featherConsumption = 1;
+
+            public int range = 16;
+            public int strength = 2;
+        }
+
+        public static class FireStaffConfig {
+
+            @Config.RequiresMcRestart
+            public int durability = 256;
+
+            public int cooldown = 40;
+            public int featherConsumption = 4;
+
+            public int range = 16;
         }
     }
 
