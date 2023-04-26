@@ -34,7 +34,7 @@ public class IceBallStaff extends Staff {
 
             world.spawnEntity(iceBall);
 
-            world.playSound(null, player.getPosition(), MMSounds.ENTITY_FROSTMAW_ICEBALL_SHOOT, SoundCategory.MASTER, 2, 0.7F);
+            world.playSound(null, player.getPosition(), MMSounds.ENTITY_FROSTMAW_ICEBALL_SHOOT, SoundCategory.PLAYERS, 2, 0.7F);
 
             return useItem(itemStack, player, MysticStaffsConfig.common.iceBallStaff.cooldown, MysticStaffsConfig.common.iceBallStaff.featherConsumption);
         }

@@ -9,8 +9,11 @@ item.ice_ball_staff.name=Ice Ball Staff
 item.sunstrike_staff.name=Sunstrike Staff
 item.solar_beam_staff.name=Solar Beam Staff
 item.invisibility_staff.name=Invisibility Staff
-item.heal_staff=Heal Staff
-item.fire_staff=Fire Staff
+item.heal_staff.name=Heal Staff
+item.fire_staff.name=Fire Staff
+item.wind_staff.name=Wind Staff
+item.flight_staff.name=Flight Staff
+item.glow_staff.name=Glow Staff
 
 # Configuration
 
@@ -101,3 +104,43 @@ mysticstaffs.general.common.firestaff.featherconsumption=Feather Consumption
 mysticstaffs.general.common.firestaff.featherconsumption.tooltip=Feather consumption per use of the Fire Staff
 mysticstaffs.general.common.firestaff.range=Range
 mysticstaffs.general.common.firestaff.range.tooltip=Range of the Fire Staff
+mysticstaffs.general.common.firestaff.ignitePlayers=Ignite Players
+mysticstaffs.general.common.firestaff.ignitePlayers.tooltip=Whether or not the Fire Staff should ignite other players
+
+mysticstaffs.general.common.windstaff=Wind Staff
+mysticstaffs.general.common.windstaff.tooltip=Configuration for the Wind Staff
+mysticstaffs.general.common.windstaff.durability=Durability
+mysticstaffs.general.common.windstaff.durability.tooltip=Max durability of the Wind Staff, 0 means infinite
+mysticstaffs.general.common.windstaff.cooldown=Cooldown
+mysticstaffs.general.common.windstaff.cooldown.tooltip=Cooldown between uses of the Wind Staff in ticks
+mysticstaffs.general.common.windstaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.windstaff.featherconsumption.tooltip=Feather consumption per use of the Wind Staff
+mysticstaffs.general.common.windstaff.strength=Strength
+mysticstaffs.general.common.windstaff.strength.tooltip=Strength of the Wind Staff effect
+
+mysticstaffs.general.common.flightstaff=Flight Staff
+mysticstaffs.general.common.flightstaff.tooltip=Configuration for the Flight Staff
+mysticstaffs.general.common.flightstaff.durability=Durability
+mysticstaffs.general.common.flightstaff.durability.tooltip=Max durability of the Flight Staff, 0 means infinite
+mysticstaffs.general.common.flightstaff.cooldown=Cooldown
+mysticstaffs.general.common.flightstaff.cooldown.tooltip=Cooldown between uses of the Flight Staff in ticks
+mysticstaffs.general.common.flightstaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.flightstaff.featherconsumption.tooltip=Feather consumption per use of the Flight Staff
+mysticstaffs.general.common.flightstaff.forwardstrength=Forward Strength
+mysticstaffs.general.common.flightstaff.forwardstrength.tooltip=Forward strength of the Flight Staff effect
+mysticstaffs.general.common.flightstaff.upwardstrength=Upward Strength
+mysticstaffs.general.common.flightstaff.upwardstrength.tooltip=Upward strength of the Flight Staff effect
+
+mysticstaffs.general.common.glowstaff=Glow Staff
+mysticstaffs.general.common.glowstaff.tooltip=Configuration for the Glow Staff
+mysticstaffs.general.common.glowstaff.durability=Durability
+mysticstaffs.general.common.glowstaff.durability.tooltip=Max durability of the Glow Staff, 0 means infinite
+mysticstaffs.general.common.glowstaff.cooldown=Cooldown
+mysticstaffs.general.common.glowstaff.cooldown.tooltip=Cooldown between uses of the Glow Staff in ticks
+mysticstaffs.general.common.glowstaff.featherconsumption=Feather Consumption
+mysticstaffs.general.common.glowstaff.featherconsumption.tooltip=Feather consumption per use of the Glow Staff
+mysticstaffs.general.common.glowstaff.duration=Duration
+mysticstaffs.general.common.glowstaff.duration.tooltip=Duration of the Glow Staff effect in ticks
+mysticstaffs.general.common.glowstaff.range=Range
+mysticstaffs.general.common.glowstaff.range.tooltip=Range of the Glow Staff
+

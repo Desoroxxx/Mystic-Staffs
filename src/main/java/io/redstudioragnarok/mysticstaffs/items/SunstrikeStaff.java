@@ -48,7 +48,7 @@ public class SunstrikeStaff extends Staff {
                     sunstrikeQueue.add(new EntitySunstrike(world, player, target.getX() + offsetX, target.getY(), target.getZ() + offsetZ));
                 }
 
-                world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "glow")), SoundCategory.MASTER, 2.0F, 0.7F);
+                world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "glow")), SoundCategory.PLAYERS, 2.0F, 0.7F);
 
                 return useItem(itemStack, player, MysticStaffsConfig.common.sunstrikeStaff.cooldown, MysticStaffsConfig.common.sunstrikeStaff.featherConsumption);
             }

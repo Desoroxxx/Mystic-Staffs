@@ -5,12 +5,12 @@ import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.MobEffects;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 
 public class InvisibilityStaff extends Staff {
 
@@ -24,6 +24,10 @@ public class InvisibilityStaff extends Staff {
 
         if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.invisibilityStaff.featherConsumption) {
             player.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, MysticStaffsConfig.common.invisibilityStaff.duration));
+
+            world.playSound(null, player.getPosition(), SoundEvents.ENTITY_ILLAGER_CAST_SPELL, SoundCategory.PLAYERS, 1.5F, 0.8F);
+
+            ((WorldServer) world).spawnParticle(EnumParticleTypes.SPELL_INSTANT, player.posX, player.posY, player.posZ, 10000, 0.6, 1.25, 0.6, 0.1);
 
             return useItem(itemStack, player, MysticStaffsConfig.common.invisibilityStaff.cooldown, MysticStaffsConfig.common.invisibilityStaff.featherConsumption);
         }

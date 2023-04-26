@@ -64,9 +64,7 @@ public class PathStaff extends Staff {
                     boulderQueue.add(boulder);
             }
 
-            player.fallDistance = -9;
-
-            world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "gust")), SoundCategory.MASTER, 2.0F, 0.7F);
+            world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "gust")), SoundCategory.PLAYERS, 2.0F, 0.7F);
 
             return useItem(itemStack, player, MysticStaffsConfig.common.pathStaff.cooldown, MysticStaffsConfig.common.pathStaff.featherConsumption);
         }
