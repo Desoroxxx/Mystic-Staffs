@@ -1,9 +1,7 @@
 package io.redstudioragnarok.mysticstaffs.items;
 
-import com.bobmowzie.mowziesmobs.server.entity.effects.EntityBoulder;
 import com.elenai.elenaidodge2.api.FeathersHelper;
 import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
-import io.redstudioragnarok.mysticstaffs.utils.MysticStaffsUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -49,14 +47,11 @@ public class FlightStaff extends Staff {
 
     @Override
     public void onUpdate(ItemStack itemStack, World world, Entity entity, int itemSlot, boolean isSelected) {
-
         if (!world.isRemote && entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) entity;
 
-            ItemStack heldItem = player.getHeldItem(player.getActiveHand());
-
-            if (heldItem.getItem() == this)
-                player.fallDistance = -1000;
+            if (player.getHeldItemMainhand().getItem() == this || player.getHeldItemOffhand().getItem() == this)
+                player.fallDistance = 0;
         }
     }
 }
