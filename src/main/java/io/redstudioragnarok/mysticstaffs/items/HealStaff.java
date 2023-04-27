@@ -32,7 +32,7 @@ public class HealStaff extends Staff {
                 if (nearbyLivingEntity == player)
                     nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 1, MysticStaffsConfig.common.healStaff.strengthCaster));
                 else
-                    nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, 1, MysticStaffsConfig.common.healStaff.strength));
+                    nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 1, MysticStaffsConfig.common.healStaff.strength));
             }
 
             world.playSound(null, player.getPosition(), resurrection, SoundCategory.PLAYERS, 0.5F, 0.9F);

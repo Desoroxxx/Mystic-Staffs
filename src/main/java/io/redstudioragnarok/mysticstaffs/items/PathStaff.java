@@ -53,7 +53,7 @@ public class PathStaff extends Staff {
                 double yOffset = 0.8;
 
                 if (pitch <= -0.41) // Check if the pitch is above the min height to be an upward stairway, if true set the yOffset to 0.75 to allow the player to climb on the stairs
-                    yOffset = 0.6;
+                    yOffset = 1.2;
 
                 final double distance = 2 + i * 1.5;
 

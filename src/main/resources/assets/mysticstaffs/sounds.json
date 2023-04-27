@@ -1,13 +1,4 @@
 {
-  "magic": {
-    "sounds": [ "mysticstaffs:magic" ]
-  },
-  "wind": {
-    "sounds": [ "mysticstaffs:wind" ]
-  },
-  "dark": {
-    "sounds": [ "mysticstaffs:dark" ]
-  },
   "gust": {
     "sounds": [ "mysticstaffs:gust" ]
   },
