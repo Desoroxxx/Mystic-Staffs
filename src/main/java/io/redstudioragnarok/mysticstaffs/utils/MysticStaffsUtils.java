@@ -57,4 +57,22 @@ public class MysticStaffsUtils {
 
         return world.rayTraceBlocks(startPosition, endPosition, false, true, false);
     }
+
+    /**
+     * Launches the given player in a specified direction with forward and upward strengths.
+     *
+     * @param player The EntityPlayer instance representing the player to be launched.
+     * @param forwardStrength The strength of the horizontal launch force (positive values launch the player forward).
+     * @param upwardStrength The strength of the vertical launch force (positive values launch the player upwards).
+     */
+    public static void launchPlayerInDirection(final EntityPlayer player, final float forwardStrength, final float upwardStrength) {
+        float yaw = (float) Math.toRadians(player.rotationYaw);
+        float pitch = (float) Math.toRadians(player.rotationPitch);
+
+        player.motionX = (-MathHelper.sin(yaw) * MathHelper.cos(pitch) * forwardStrength);
+        player.motionZ = (MathHelper.cos(yaw) * MathHelper.cos(pitch) * forwardStrength);
+        player.motionY = upwardStrength;
+
+        player.velocityChanged = true;
+    }
 }
