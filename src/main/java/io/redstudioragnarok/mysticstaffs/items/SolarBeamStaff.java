@@ -27,7 +27,7 @@ public class SolarBeamStaff extends Staff {
         if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.solarBeamStaff.featherConsumption) {
             MowziesMobs.NETWORK_WRAPPER.sendToServer(new MessagePlayerSolarBeam());
 
-            player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 55, MysticStaffsConfig.common.solarBeamStaff.slowness));
+            player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 75, MysticStaffsConfig.common.solarBeamStaff.slowness));
 
             return useItem(itemStack, player, MysticStaffsConfig.common.solarBeamStaff.cooldown, MysticStaffsConfig.common.solarBeamStaff.featherConsumption);
         }
