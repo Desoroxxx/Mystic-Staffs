@@ -45,6 +45,8 @@ public class MysticStaffsConfig {
 
             public int cooldown = 32;
             public int featherConsumption = 1;
+
+            public float velocity = 1.6F;
         }
 
         public static class SunstrikeStaffConfig {
@@ -92,6 +94,7 @@ public class MysticStaffsConfig {
             public int featherConsumption = 1;
 
             public int range = 16;
+            public int strengthCaster = 1;
             public int strength = 2;
         }
 
@@ -115,7 +118,8 @@ public class MysticStaffsConfig {
             public int cooldown = 20;
             public int featherConsumption = 4;
 
-            public float strength = 2.45F;
+            public float forwardStrength = 2.45F;
+            public float upwardStrength = 0.1F;
         }
 
         public static class FlightStaffConfig {

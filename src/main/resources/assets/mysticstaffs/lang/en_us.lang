@@ -41,6 +41,8 @@ mysticstaffs.general.common.iceballstaff.cooldown=Cooldown
 mysticstaffs.general.common.iceballstaff.cooldown.tooltip=Cooldown between uses of the Iceball Staff in ticks
 mysticstaffs.general.common.iceballstaff.featherconsumption=Feather Consumption
 mysticstaffs.general.common.iceballstaff.featherconsumption.tooltip=Feather consumption per use of the Iceball Staff
+mysticstaffs.general.common.iceballstaff.velocity=Ice Ball Velocity
+mysticstaffs.general.common.iceballstaff.velocity.tooltip=Velocity of the Ice Ball shoot from the Ice Ball Staff
 
 mysticstaffs.general.common.sunstrikestaff=Sunstrike Staff
 mysticstaffs.general.common.sunstrikestaff.tooltip=Configuration for the Sunstrike Staff
@@ -92,7 +94,9 @@ mysticstaffs.general.common.healstaff.featherconsumption.tooltip=Feather consump
 mysticstaffs.general.common.healstaff.range=Range
 mysticstaffs.general.common.healstaff.range.tooltip=Range of the Heal Staff
 mysticstaffs.general.common.healstaff.strength=Strength
-mysticstaffs.general.common.healstaff.strength.tooltip=Strength of the Heal Staff effect
+mysticstaffs.general.common.healstaff.strength.tooltip=Strength of the Heal Staff effect for every living entity
+mysticstaffs.general.common.healstaff.strengthcaster=Strength For Caster
+mysticstaffs.general.common.healstaff.strengthcaster.tooltip=Strength of the the Heal Staff effect for the caster
 
 mysticstaffs.general.common.firestaff=Fire Staff
 mysticstaffs.general.common.firestaff.tooltip=Configuration for the Fire Staff

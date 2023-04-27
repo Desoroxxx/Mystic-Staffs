@@ -4,13 +4,15 @@ import com.bobmowzie.mowziesmobs.server.entity.effects.EntityBoulder;
 import com.elenai.elenaidodge2.api.FeathersHelper;
 import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
 import io.redstudioragnarok.mysticstaffs.utils.MysticStaffsUtils;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 
 import java.util.LinkedList;
@@ -33,7 +35,7 @@ public class PathStaff extends Staff {
                 final double yaw = Math.toRadians(player.rotationYaw);
                 double pitch = Math.toRadians(player.rotationPitch);
 
-                if (Math.abs(Math.toDegrees(pitch)) < 6) // Check if the pitch is in the deadzone, if true set the pitch to 0
+                if (Math.abs(Math.toDegrees(pitch)) < 8) // Check if the pitch is in the deadzone, if true set the pitch to 0
                     pitch = 0;
 
                 if (pitch <= -0.85) // Check if the pitch is above the max height or under the min height, if true set the pitch to the maximum usable upward stairway
@@ -48,10 +50,10 @@ public class PathStaff extends Staff {
                 if (pitch <= -0.19)
                     y -= 0.25;
 
-                double yOffset = 1;
+                double yOffset = 0.8;
 
                 if (pitch <= -0.41) // Check if the pitch is above the min height to be an upward stairway, if true set the yOffset to 0.75 to allow the player to climb on the stairs
-                    yOffset = 0.8;
+                    yOffset = 0.6;
 
                 final double distance = 2 + i * 1.5;
 
@@ -60,7 +62,7 @@ public class PathStaff extends Staff {
                 boulder.setDeathTime(MysticStaffsConfig.common.pathStaff.lifetime);
                 boulder.setPosition(player.posX + x * distance, (player.posY - yOffset) + y * distance, player.posZ + z * distance);
 
-                if (world.getBlockState(boulder.getPosition()).getMaterial() == Material.AIR)
+                if (!world.getBlockState(boulder.getPosition()).getMaterial().isSolid())
                     boulderQueue.add(boulder);
             }
 

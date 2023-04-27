@@ -15,11 +15,10 @@ import net.minecraft.world.World;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Random;
 
 public class SunstrikeStaff extends Staff {
 
-    private static final Random random = new Random();
+    private static final SoundEvent glow = new SoundEvent(new ResourceLocation("mysticstaffs", "glow"));
 
     private final Queue<EntitySunstrike> sunstrikeQueue = new LinkedList<>();
 
@@ -42,13 +41,13 @@ public class SunstrikeStaff extends Staff {
                 final int area = MysticStaffsConfig.common.sunstrikeStaff.radius;
 
                 for (int i = 0; i < MysticStaffsConfig.common.sunstrikeStaff.amount; i++) {
-                    final int offsetX = random.nextInt((area * 2) + 1) - area;
-                    final int offsetZ = random.nextInt((area * 2) + 1) - area;
+                    final int offsetX = MysticStaffsUtils.random.nextInt((area * 2) + 1) - area;
+                    final int offsetZ = MysticStaffsUtils.random.nextInt((area * 2) + 1) - area;
 
                     sunstrikeQueue.add(new EntitySunstrike(world, player, target.getX() + offsetX, target.getY(), target.getZ() + offsetZ));
                 }
 
-                world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "glow")), SoundCategory.PLAYERS, 2.0F, 0.7F);
+                world.playSound(null, player.getPosition(), glow, SoundCategory.PLAYERS, 2.0F, 0.7F);
 
                 return useItem(itemStack, player, MysticStaffsConfig.common.sunstrikeStaff.cooldown, MysticStaffsConfig.common.sunstrikeStaff.featherConsumption);
             }
@@ -64,7 +63,7 @@ public class SunstrikeStaff extends Staff {
         if (!world.isRemote && !sunstrikeQueue.isEmpty()) {
             if (delay == 0) {
                 world.spawnEntity(sunstrikeQueue.poll());
-                delay = random.nextInt(MysticStaffsConfig.common.sunstrikeStaff.delay) + 1;
+                delay = MysticStaffsUtils.random.nextInt(MysticStaffsConfig.common.sunstrikeStaff.delay) + 1;
             } else {
                 delay--;
             }

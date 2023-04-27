@@ -2,6 +2,7 @@ package io.redstudioragnarok.mysticstaffs.items;
 
 import com.elenai.elenaidodge2.api.FeathersHelper;
 import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.MobEffects;
@@ -10,8 +11,11 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.*;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldServer;
 
 public class HealStaff extends Staff {
+
+    private static final SoundEvent resurrection = new SoundEvent(new ResourceLocation("mysticstaffs", "resurrection"));
 
     public HealStaff() {
         super(MysticStaffsConfig.common.healStaff.durability);
@@ -24,10 +28,16 @@ public class HealStaff extends Staff {
         if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.healStaff.featherConsumption) {
             final int range = MysticStaffsConfig.common.healStaff.range;
 
-            for (EntityPlayer nearbyPlayer : world.getEntitiesWithinAABB(EntityPlayer.class, new AxisAlignedBB(player.posX - range, player.posY - range, player.posZ - range, player.posX + range, player.posY + range, player.posZ + range)))
-                nearbyPlayer.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 1, MysticStaffsConfig.common.healStaff.strength));
+            for (EntityLivingBase nearbyLivingEntity : world.getEntitiesWithinAABB(EntityLivingBase.class, new AxisAlignedBB(player.posX - range, player.posY - range, player.posZ - range, player.posX + range, player.posY + range, player.posZ + range))) {
+                if (nearbyLivingEntity == player)
+                    nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, 1, MysticStaffsConfig.common.healStaff.strengthCaster));
+                else
+                    nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, 1, MysticStaffsConfig.common.healStaff.strength));
+            }
 
-            world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "resurrection")), SoundCategory.PLAYERS, 0.5F, 0.9F);
+            world.playSound(null, player.getPosition(), resurrection, SoundCategory.PLAYERS, 0.5F, 0.9F);
+
+            ((WorldServer) world).spawnParticle(EnumParticleTypes.SPELL_WITCH, player.posX, player.posY, player.posZ, 2000, 2.75, 0.5, 2.75, 0.1);
 
             return useItem(itemStack, player, MysticStaffsConfig.common.healStaff.cooldown, MysticStaffsConfig.common.healStaff.featherConsumption);
         }

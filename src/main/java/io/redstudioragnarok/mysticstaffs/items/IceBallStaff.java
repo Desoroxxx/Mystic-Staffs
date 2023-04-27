@@ -30,7 +30,7 @@ public class IceBallStaff extends Staff {
             Vec3d offset = player.getLookVec().scale(1.5);
 
             iceBall.setPositionAndRotation(player.posX + offset.x, player.posY + 1.5, player.posZ + offset.z, (float) Math.toRadians(player.rotationYaw), (float) Math.toRadians(player.rotationPitch));
-            iceBall.shoot(player.getLookVec().x, player.getLookVec().y, player.getLookVec().z, 1.6F, 0F);
+            iceBall.shoot(player.getLookVec().x, player.getLookVec().y, player.getLookVec().z, MysticStaffsConfig.common.iceBallStaff.velocity, 0F);
 
             world.spawnEntity(iceBall);
 

@@ -15,6 +15,8 @@ import net.minecraft.world.WorldServer;
 
 public class GlowStaff extends Staff {
 
+    private static final SoundEvent glow = new SoundEvent(new ResourceLocation("mysticstaffs", "glow"));
+
     public GlowStaff() {
         super(MysticStaffsConfig.common.glowStaff.durability);
     }
@@ -29,7 +31,7 @@ public class GlowStaff extends Staff {
             for (EntityLivingBase nearbyLivingEntity : world.getEntitiesWithinAABB(EntityLivingBase.class, new AxisAlignedBB(player.posX - range, player.posY - range, player.posZ - range, player.posX + range, player.posY + range, player.posZ + range)))
                 nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.GLOWING, MysticStaffsConfig.common.glowStaff.duration, 0));
 
-            world.playSound(null, player.getPosition(), new SoundEvent(new ResourceLocation("mysticstaffs", "glow")), SoundCategory.PLAYERS, 1.5F, 0.5F);
+            world.playSound(null, player.getPosition(), glow, SoundCategory.PLAYERS, 1.5F, 0.5F);
 
             ((WorldServer) world).spawnParticle(EnumParticleTypes.SPELL_INSTANT, player.posX, player.posY - 1.25, player.posZ, 10000, 10, 5, 10, 0F);
 
