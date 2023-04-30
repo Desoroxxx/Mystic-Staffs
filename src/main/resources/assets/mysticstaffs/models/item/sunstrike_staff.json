@@ -1,7 +1,7 @@
 {
 	"parent": "builtin/generated",
 	"textures": {
-		"layer0": "mysticstaffs:items/staff"
+		"layer0": "mysticstaffs:items/sunstrike_staff"
 	},
 	"display": {
 		"firstperson_righthand": {
