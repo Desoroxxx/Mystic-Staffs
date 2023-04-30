@@ -18,6 +18,11 @@ public class FireStaff extends Staff {
         super(MysticStaffsConfig.common.fireStaff.durability);
     }
 
+    /**
+     * Activates the Fire Staff's ability when the item is right-clicked.
+     * <p>
+     * Sets nearby living entities on fire, except for the player who used the item and other players if the configuration is set to not ignite players.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);

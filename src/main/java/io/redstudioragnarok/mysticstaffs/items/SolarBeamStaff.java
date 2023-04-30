@@ -20,6 +20,12 @@ public class SolarBeamStaff extends Staff {
         super(MysticStaffsConfig.common.mowziesStaffs.solarBeamStaff.durability);
     }
 
+    /**
+     * Activates the Solar Beam Staff's ability when the item is right-clicked.
+     * <p>
+     * Sends a message to the server to perform a solar beam attack.
+     * The player is given a configurable slowness effect during the attack.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);

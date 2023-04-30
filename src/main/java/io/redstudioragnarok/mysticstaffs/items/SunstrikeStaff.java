@@ -28,6 +28,14 @@ public class SunstrikeStaff extends Staff {
         super(MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.durability);
     }
 
+    /**
+     * Activates the Sunstrike Staff's ability when the item is right-clicked.
+     * <p>
+     * Creates multiple sunstrikes around a targeted block within a specified radius.
+     * The sunstrikes are created as EntitySunstrike instances, which are queued and then spawned in the world during onUpdate method, with a configurable delay between each.
+     * <p>
+     * The ability will only be activated if the ray tracing result is a block.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
@@ -58,6 +66,12 @@ public class SunstrikeStaff extends Staff {
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
 
+    /**
+     * Called each tick as long the item is on a player inventory.
+     * <p>
+     * Handles the delay between sunstrike spawns.
+     * Updates the sunstrike queue, spawning a sunstrike and decrementing the delay counter.
+     */
     @Override
     public void onUpdate(ItemStack itemStack, World world, Entity entity, int itemSlot, boolean isSelected) {
         if (!world.isRemote && !sunstrikeQueue.isEmpty()) {

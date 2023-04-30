@@ -18,6 +18,12 @@ public class WindStaff extends Staff {
         super(MysticStaffsConfig.common.windStaff.durability);
     }
 
+    /**
+     * Activates the Wind Staff's ability when the item is right-clicked.
+     * <p>
+     * Launches the player in the direction they are facing with configurable forward and upward strength.
+     * The player's fall distance is reduced.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);

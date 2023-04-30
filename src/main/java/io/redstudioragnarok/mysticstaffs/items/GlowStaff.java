@@ -21,6 +21,11 @@ public class GlowStaff extends Staff {
         super(MysticStaffsConfig.common.glowStaff.durability);
     }
 
+    /**
+     * Activates the Glow Staff's ability when the item is right-clicked.
+     * <p>
+     * Applies the Glowing effect to nearby living entities within the configured range.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);

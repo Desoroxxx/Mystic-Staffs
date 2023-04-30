@@ -18,6 +18,11 @@ public class InvisibilityStaff extends Staff {
         super(MysticStaffsConfig.common.invisibilityStaff.durability);
     }
 
+    /**
+     * Activates the Invisibility Staff's ability when the item is right-clicked.
+     * <p>
+     * Applies the Invisibility effect to the player using the item.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);

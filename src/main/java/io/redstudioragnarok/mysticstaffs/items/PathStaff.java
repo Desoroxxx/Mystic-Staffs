@@ -25,6 +25,16 @@ public class PathStaff extends Staff {
         super(MysticStaffsConfig.common.mowziesStaffs.pathStaff.durability);
     }
 
+    /**
+     * Activates the Path Staff's ability when the item is right-clicked.
+     * <p>
+     * Creates a path of ice blocks in front of the player based on the player's viewing direction.
+     * <p>
+     * The ice blocks are created at a specified length, and each block is placed at an increment of 1.5 blocks from the previous one.
+     * The blocks are created as EntityBoulder instances, which are queued and then spawned in the world during onUpdate method.
+     * <p>
+     * Ice blocks will despawn after a configurable lifetime.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
@@ -73,6 +83,11 @@ public class PathStaff extends Staff {
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
 
+    /**
+     * Called each tick as long the item is on a player inventory.
+     * <p>
+     * If the boulder is not null, it will be spawned in the world with an explosion particle effect.
+     */
     @Override
     public void onUpdate(ItemStack itemStack, World world, Entity entity, int itemSlot, boolean isSelected) {
         if (!world.isRemote) {

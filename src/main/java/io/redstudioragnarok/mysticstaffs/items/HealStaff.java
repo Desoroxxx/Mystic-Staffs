@@ -21,6 +21,11 @@ public class HealStaff extends Staff {
         super(MysticStaffsConfig.common.healStaff.durability);
     }
 
+    /**
+     * Activates the Heal Staff's ability when the item is right-clicked.
+     * <p>
+     * Applies the Instant Health effect to nearby living entities within the configured range, with different strengths for the caster and other living entities.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
@@ -46,5 +51,4 @@ public class HealStaff extends Staff {
 
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
-
 }

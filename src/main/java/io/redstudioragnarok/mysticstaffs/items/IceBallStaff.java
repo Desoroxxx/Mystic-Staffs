@@ -20,6 +20,11 @@ public class IceBallStaff extends Staff {
         super(MysticStaffsConfig.common.mowziesStaffs.iceBallStaff.durability);
     }
 
+    /**
+     * Activates the Ice Ball Staff's ability when the item is right-clicked.
+     * <p>
+     * Spawns an ice ball projectile in the direction the player is looking.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);

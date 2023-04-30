@@ -19,6 +19,12 @@ public class FlightStaff extends Staff {
         super(MysticStaffsConfig.common.flightStaff.durability);
     }
 
+
+    /**
+     * Activates the Flight Staff's ability when the item is right-clicked.
+     * <p>
+     * Launches the player in the direction they are facing with configurable forward and upward strength.
+     */
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
@@ -38,6 +44,11 @@ public class FlightStaff extends Staff {
         return new ActionResult<>(EnumActionResult.PASS, itemStack);
     }
 
+    /**
+     * Called each tick as long the item is on a player inventory.
+     * <p>
+     * Preventing the player from taking fall damage when holding the Flight Staff in either hand.
+     */
     @Override
     public void onUpdate(ItemStack itemStack, World world, Entity entity, int itemSlot, boolean isSelected) {
         if (!world.isRemote && entity instanceof EntityPlayer) {
