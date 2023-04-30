@@ -30,7 +30,7 @@ public class PathStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.pathStaff.featherConsumption) {
+        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.pathStaff.featherConsumption)) {
             for (int i = 0; i < MysticStaffsConfig.common.pathStaff.length; i++) {
                 final double yaw = Math.toRadians(player.rotationYaw);
                 double pitch = Math.toRadians(player.rotationPitch);

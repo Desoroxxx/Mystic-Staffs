@@ -22,7 +22,7 @@ public class InvisibilityStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.invisibilityStaff.featherConsumption) {
+        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.invisibilityStaff.featherConsumption)) {
             player.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, MysticStaffsConfig.common.invisibilityStaff.duration));
 
             world.playSound(null, player.getPosition(), SoundEvents.ENTITY_ILLAGER_CAST_SPELL, SoundCategory.PLAYERS, 1.5F, 0.8F);

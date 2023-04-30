@@ -24,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //                /$$  | $$
 //               |  $$$$$$/
 //                \______/
-@Mod(modid = ModReference.id, name = ModReference.name, version = ModReference.version, dependencies = "required:mowziesmobs@[1.5.8,);required:elenaidodge2@[1.1.0,)")
+@Mod(modid = ModReference.id, name = ModReference.name, version = ModReference.version, dependencies = "required:mowziesmobs@[1.5.8,)")
 @Mod.EventBusSubscriber
 public class MysticStaffs {
 

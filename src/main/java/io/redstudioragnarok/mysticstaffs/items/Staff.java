@@ -8,8 +8,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
+import net.minecraftforge.fml.common.Loader;
 
 public class Staff extends Item {
+
+    public static final boolean isElenaiDodge2Loaded = Loader.isModLoaded("elenaidodge2");
 
     private final int durability;
 
@@ -27,7 +30,8 @@ public class Staff extends Item {
     }
 
     protected ActionResult<ItemStack> useItem(ItemStack itemStack, EntityPlayer player, int cooldown, int featherConsumption) {
-        FeathersHelper.decreaseFeathers((EntityPlayerMP) player, featherConsumption);
+        if (isElenaiDodge2Loaded)
+            FeathersHelper.decreaseFeathers((EntityPlayerMP) player, featherConsumption);
 
         player.getCooldownTracker().setCooldown(this, cooldown);
 

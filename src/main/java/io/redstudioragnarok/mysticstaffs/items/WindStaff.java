@@ -22,7 +22,7 @@ public class WindStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.windStaff.featherConsumption) {
+        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.windStaff.featherConsumption)) {
             MysticStaffsUtils.launchPlayerInDirection(player, MysticStaffsConfig.common.windStaff.forwardStrength, MysticStaffsConfig.common.windStaff.upwardStrength);
 
             player.fallDistance -= 6;

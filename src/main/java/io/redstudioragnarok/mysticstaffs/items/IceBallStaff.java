@@ -24,7 +24,7 @@ public class IceBallStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.iceBallStaff.featherConsumption) {
+        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.iceBallStaff.featherConsumption)) {
             EntityIceBall iceBall = new EntityIceBall(world, player);
 
             Vec3d offset = player.getLookVec().scale(1.5);

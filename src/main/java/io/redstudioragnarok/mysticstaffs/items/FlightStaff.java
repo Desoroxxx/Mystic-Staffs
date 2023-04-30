@@ -23,7 +23,7 @@ public class FlightStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.flightStaff.featherConsumption) {
+        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.flightStaff.featherConsumption)) {
             MysticStaffsUtils.launchPlayerInDirection(player, MysticStaffsConfig.common.flightStaff.forwardStrength, MysticStaffsConfig.common.flightStaff.upwardStrength);
 
             world.playSound(null, player.getPosition(), gust, SoundCategory.PLAYERS, 1.2F, 0.6F);
