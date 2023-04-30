@@ -1,6 +1,5 @@
 package io.redstudioragnarok.mysticstaffs;
 
-import io.redstudioragnarok.mysticstaffs.creativetab.StaffsTab;
 import io.redstudioragnarok.mysticstaffs.items.*;
 import io.redstudioragnarok.mysticstaffs.utils.ModReference;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -30,8 +29,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class MysticStaffs {
 
     public static final boolean isMowziesMobsLoaded = Loader.isModLoaded("mowziesmobs");
-
-    public static final StaffsTab staffsTab = new StaffsTab();
 
     public static Item pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff, invisibilityStaff, healStaff, fireStaff, windStaff, flightStaff, glowStaff;
 
