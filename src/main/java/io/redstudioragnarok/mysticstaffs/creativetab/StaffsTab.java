@@ -15,6 +15,6 @@ public class StaffsTab extends CreativeTabs {
     @Override
     @SideOnly(Side.CLIENT)
     public ItemStack createIcon() {
-        return new ItemStack(MysticStaffs.pathStaff);
+        return new ItemStack(MysticStaffs.fireStaff);
     }
 }
