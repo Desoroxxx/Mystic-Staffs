@@ -25,22 +25,22 @@ public class SunstrikeStaff extends Staff {
     private int delay = 0;
 
     public SunstrikeStaff() {
-        super(MysticStaffsConfig.common.sunstrikeStaff.durability);
+        super(MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.durability);
     }
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.sunstrikeStaff.featherConsumption)) {
+        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.featherConsumption)) {
             RayTraceResult rayTraceResult = MysticStaffsUtils.rayTraceWithExtendedReach(world, player);
 
             if ((rayTraceResult != null) && rayTraceResult.typeOfHit.equals(RayTraceResult.Type.BLOCK)) {
                 final BlockPos target = new BlockPos.MutableBlockPos(rayTraceResult.getBlockPos());
 
-                final int area = MysticStaffsConfig.common.sunstrikeStaff.radius;
+                final int area = MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.radius;
 
-                for (int i = 0; i < MysticStaffsConfig.common.sunstrikeStaff.amount; i++) {
+                for (int i = 0; i < MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.amount; i++) {
                     final int offsetX = MysticStaffsUtils.random.nextInt((area * 2) + 1) - area;
                     final int offsetZ = MysticStaffsUtils.random.nextInt((area * 2) + 1) - area;
 
@@ -49,7 +49,7 @@ public class SunstrikeStaff extends Staff {
 
                 world.playSound(null, player.getPosition(), glow, SoundCategory.PLAYERS, 2.0F, 0.7F);
 
-                return useItem(itemStack, player, MysticStaffsConfig.common.sunstrikeStaff.cooldown, MysticStaffsConfig.common.sunstrikeStaff.featherConsumption);
+                return useItem(itemStack, player, MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.cooldown, MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.featherConsumption);
             }
         }
 
@@ -63,7 +63,7 @@ public class SunstrikeStaff extends Staff {
         if (!world.isRemote && !sunstrikeQueue.isEmpty()) {
             if (delay == 0) {
                 world.spawnEntity(sunstrikeQueue.poll());
-                delay = MysticStaffsUtils.random.nextInt(MysticStaffsConfig.common.sunstrikeStaff.delay) + 1;
+                delay = MysticStaffsUtils.random.nextInt(MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.delay) + 1;
             } else {
                 delay--;
             }

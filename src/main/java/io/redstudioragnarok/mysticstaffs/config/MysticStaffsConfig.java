@@ -15,10 +15,8 @@ public class MysticStaffsConfig {
 
     public static class Common {
 
-        public final PathStaffConfig pathStaff = new PathStaffConfig();
-        public final IceballStaffConfig iceBallStaff = new IceballStaffConfig();
-        public final SunstrikeStaffConfig sunstrikeStaff = new SunstrikeStaffConfig();
-        public final SolarBeamStaffConfig solarBeamStaff = new SolarBeamStaffConfig();
+        public final MowziesStaffs mowziesStaffs = new MowziesStaffs();
+
         public final InvisibilityStaffConfig invisibilityStaff = new InvisibilityStaffConfig();
         public final HealStaffConfig healStaff = new HealStaffConfig();
         public final FireStaffConfig fireStaff = new FireStaffConfig();
@@ -26,52 +24,60 @@ public class MysticStaffsConfig {
         public final FlightStaffConfig flightStaff = new FlightStaffConfig();
         public final GlowStaffConfig glowStaff = new GlowStaffConfig();
 
-        public static class PathStaffConfig {
+        public static class MowziesStaffs {
 
-            @Config.RequiresMcRestart
-            public int durability = 128;
+            public final PathStaffConfig pathStaff = new PathStaffConfig();
+            public final IceballStaffConfig iceBallStaff = new IceballStaffConfig();
+            public final SunstrikeStaffConfig sunstrikeStaff = new SunstrikeStaffConfig();
+            public final SolarBeamStaffConfig solarBeamStaff = new SolarBeamStaffConfig();
 
-            public int cooldown = 32;
-            public int featherConsumption = 1;
+            public static class PathStaffConfig {
 
-            public int lifetime = 256;
-            public int length = 10;
-        }
+                @Config.RequiresMcRestart
+                public int durability = 128;
 
-        public static class IceballStaffConfig {
+                public int cooldown = 32;
+                public int featherConsumption = 1;
 
-            @Config.RequiresMcRestart
-            public int durability = 128;
+                public int lifetime = 256;
+                public int length = 10;
+            }
 
-            public int cooldown = 32;
-            public int featherConsumption = 1;
+            public static class IceballStaffConfig {
 
-            public float velocity = 1.6F;
-        }
+                @Config.RequiresMcRestart
+                public int durability = 128;
 
-        public static class SunstrikeStaffConfig {
+                public int cooldown = 32;
+                public int featherConsumption = 1;
 
-            @Config.RequiresMcRestart
-            public int durability = 64;
+                public float velocity = 1.6F;
+            }
 
-            public int cooldown = 32;
-            public int featherConsumption = 1;
+            public static class SunstrikeStaffConfig {
 
-            public int amount = 4;
-            public int radius = 2;
-            public int delay = 6;
-            public int reachMultiplier = 40;
-        }
+                @Config.RequiresMcRestart
+                public int durability = 64;
 
-        public static class SolarBeamStaffConfig {
+                public int cooldown = 32;
+                public int featherConsumption = 1;
 
-            @Config.RequiresMcRestart
-            public int durability = 64;
+                public int amount = 4;
+                public int radius = 2;
+                public int delay = 6;
+                public int reachMultiplier = 40;
+            }
 
-            public int cooldown = 110;
-            public int featherConsumption = 1;
+            public static class SolarBeamStaffConfig {
 
-            public int slowness = 1;
+                @Config.RequiresMcRestart
+                public int durability = 64;
+
+                public int cooldown = 110;
+                public int featherConsumption = 1;
+
+                public int slowness = 1;
+            }
         }
 
         public static class InvisibilityStaffConfig {

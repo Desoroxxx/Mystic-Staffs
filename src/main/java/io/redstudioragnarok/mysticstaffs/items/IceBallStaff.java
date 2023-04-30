@@ -17,26 +17,26 @@ import net.minecraft.world.World;
 public class IceBallStaff extends Staff {
 
     public IceBallStaff() {
-        super(MysticStaffsConfig.common.iceBallStaff.durability);
+        super(MysticStaffsConfig.common.mowziesStaffs.iceBallStaff.durability);
     }
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.iceBallStaff.featherConsumption)) {
+        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.mowziesStaffs.iceBallStaff.featherConsumption)) {
             EntityIceBall iceBall = new EntityIceBall(world, player);
 
             Vec3d offset = player.getLookVec().scale(1.5);
 
             iceBall.setPositionAndRotation(player.posX + offset.x, player.posY + 1.5, player.posZ + offset.z, (float) Math.toRadians(player.rotationYaw), (float) Math.toRadians(player.rotationPitch));
-            iceBall.shoot(player.getLookVec().x, player.getLookVec().y, player.getLookVec().z, MysticStaffsConfig.common.iceBallStaff.velocity, 0F);
+            iceBall.shoot(player.getLookVec().x, player.getLookVec().y, player.getLookVec().z, MysticStaffsConfig.common.mowziesStaffs.iceBallStaff.velocity, 0F);
 
             world.spawnEntity(iceBall);
 
             world.playSound(null, player.getPosition(), MMSounds.ENTITY_FROSTMAW_ICEBALL_SHOOT, SoundCategory.PLAYERS, 2, 0.7F);
 
-            return useItem(itemStack, player, MysticStaffsConfig.common.iceBallStaff.cooldown, MysticStaffsConfig.common.iceBallStaff.featherConsumption);
+            return useItem(itemStack, player, MysticStaffsConfig.common.mowziesStaffs.iceBallStaff.cooldown, MysticStaffsConfig.common.mowziesStaffs.iceBallStaff.featherConsumption);
         }
 
         player.swingArm(hand);

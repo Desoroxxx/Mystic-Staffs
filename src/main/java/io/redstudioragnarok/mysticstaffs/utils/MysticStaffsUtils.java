@@ -51,7 +51,7 @@ public class MysticStaffsUtils {
         final float cosPitch = -MathHelper.cos(-pitch * 0.017453292F);
         final float sinPitch = MathHelper.sin(-pitch * 0.017453292F);
 
-        final float reachMultiplier = MysticStaffsConfig.common.sunstrikeStaff.reachMultiplier;
+        final float reachMultiplier = MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.reachMultiplier;
 
         final Vec3d endPosition = startPosition.add((sinYaw * cosPitch) * reachMultiplier, sinPitch * reachMultiplier, (cosYaw * cosPitch) * reachMultiplier);
 
