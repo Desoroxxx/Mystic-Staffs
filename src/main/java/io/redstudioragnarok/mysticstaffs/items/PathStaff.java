@@ -12,7 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 
 import java.util.LinkedList;
@@ -81,7 +80,7 @@ public class PathStaff extends Staff {
 
             if (boulder != null) {
                 world.spawnEntity(boulder);
-                MysticStaffsUtils.spawnParticleAtEntity(EnumParticleTypes.EXPLOSION_NORMAL, boulder, 25);
+                MysticStaffsUtils.spawnExplosionParticleAtEntity(boulder, 25);
             }
         }
     }

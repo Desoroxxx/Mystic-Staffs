@@ -157,10 +157,8 @@ public class MysticStaffsConfig {
     private static class EventHandler {
         @SubscribeEvent
         public static void onConfigChanged(final ConfigChangedEvent.OnConfigChangedEvent onConfigChangedEvent) {
-            if (onConfigChangedEvent.getModID().equals(ModReference.id)) {
+            if (onConfigChangedEvent.getModID().equals(ModReference.id))
                 ConfigManager.sync(ModReference.id, Config.Type.INSTANCE);
-            }
         }
     }
-
 }

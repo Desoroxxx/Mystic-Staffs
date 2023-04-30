@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * This class defines constants for Mystic Staffs.
  * <p>
- * They are automatically updated by Gradle on compile time.
+ * id and version are automatically updated by RFG.
  */
 public class ModReference {
 

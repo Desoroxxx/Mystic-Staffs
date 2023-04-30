@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+@SideOnly(Side.CLIENT)
 public class StaffsTab extends CreativeTabs {
 
     public StaffsTab() {
@@ -13,7 +14,6 @@ public class StaffsTab extends CreativeTabs {
     }
 
     @Override
-    @SideOnly(Side.CLIENT)
     public ItemStack createIcon() {
         return new ItemStack(MysticStaffs.fireStaff);
     }
