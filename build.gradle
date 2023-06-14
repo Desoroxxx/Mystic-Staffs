@@ -19,7 +19,6 @@ java {
     }
     // Generate sources and javadocs jars when building and publishing
     withSourcesJar()
-    withJavadocJar()
 }
 
 minecraft {
@@ -66,9 +65,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'net.jafama:jafama:2.+'
-    embed 'net.jafama:jafama:2.+'
-
     implementation rfg.deobf("curse.maven:LLibrary-243298:2504999")
     implementation rfg.deobf("curse.maven:MowziesMobs-250498:3048685")
 

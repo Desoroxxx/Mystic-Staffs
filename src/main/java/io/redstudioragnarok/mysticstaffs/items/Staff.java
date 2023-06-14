@@ -11,9 +11,9 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraftforge.fml.common.Loader;
 
 /**
- * This is the base class for all staff items in the mod.
+ * This is the base class for all staffs in the mod.
  * <p>
- * It extends the Item class and provides common functionality for staff items, such as handling durability and usage.
+ * It extends the Item class and provides common functionality for staffs, such as handling durability and usage.
  */
 public class Staff extends Item {
 
@@ -26,7 +26,7 @@ public class Staff extends Item {
     /**
      * Constructor for the Staff class.
      *
-     * @param durabilityInput The durability value for the staff item
+     * @param durabilityInput The durability value for the staff
      */
     protected Staff(final int durabilityInput) {
         setCreativeTab(staffsTab);
