@@ -2,11 +2,11 @@
   {
     "modid": "${id}",
     "name": "Mystic Staffs",
-    "description": "",
+    "description": "Mystical Staffs adds 10 vanilla-friendly Staffs, useful for modpack devs. These staffs have no crafting recipes but can be added through CraftTweaker or similar mods.",
     "version": "${version}",
     "mcversion": "1.12.2",
     "authorList": ["Red Studio"],
-    "credits": "Desoroxxx",
-    "logoFile": "assets/mysticstaffs/textures/items/staff.png"
+    "credits": "Desoroxxx, Ski_",
+    "logoFile": "assets/mysticstaffs/textures/items/fire_staff.png"
   }
 ]
