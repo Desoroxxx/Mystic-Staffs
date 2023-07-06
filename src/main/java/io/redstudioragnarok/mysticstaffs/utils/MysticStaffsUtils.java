@@ -1,7 +1,6 @@
 package io.redstudioragnarok.mysticstaffs.utils;
 
 import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
-import net.jafama.FastMath;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumParticleTypes;
@@ -50,8 +49,8 @@ public class MysticStaffsUtils {
 
         // Get player's rotation yaw and compute cosine and sine values
         final float yaw = player.rotationYaw;
-        final float cosYaw = MathHelper.cos(-yaw * 0.017453292F - (float) FastMath.PI);
-        final float sinYaw = MathHelper.sin(-yaw * 0.017453292F - (float) FastMath.PI);
+        final float cosYaw = MathHelper.cos(-yaw * 0.017453292F - (float) Math.PI);
+        final float sinYaw = MathHelper.sin(-yaw * 0.017453292F - (float) Math.PI);
 
         // Get player's rotation pitch and compute cosine and sine values
         final float pitch = player.rotationPitch;
