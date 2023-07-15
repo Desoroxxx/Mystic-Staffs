@@ -24,7 +24,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //                /$$  | $$
 //               |  $$$$$$/
 //                \______/
-@Mod(modid = ModReference.ID, name = ModReference.NAME, version = ModReference.VERSION)
+@Mod(modid = ModReference.ID, name = ModReference.NAME, version = ModReference.VERSION, updateJSON = "https://raw.githubusercontent.com/Desoroxxx/Mystic-Staffs/main/update.json")
 @Mod.EventBusSubscriber
 public class MysticStaffs {
 

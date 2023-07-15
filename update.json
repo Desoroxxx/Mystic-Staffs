@@ -1,0 +1,11 @@
+{
+  "homepage": "https://www.curseforge.com/minecraft/mc-mods/modern-warfare-cubed",
+  "promos": {
+    "1.12.2-latest": "1.1",
+    "1.12.2-recommended": "1.1"
+  },
+  "1.12.2":{
+    "1.1": "https://github.com/Desoroxxx/Mystic-Staffs/blob/main/Changelog.md#mystic-staffs-11---2023-7-15",
+    "1.0": "Initial release"
+  }
+}
