@@ -22,7 +22,7 @@ public class PathStaff extends Staff {
     private final Queue<EntityBoulder> boulderQueue = new LinkedList<>();
 
     public PathStaff() {
-        super(MysticStaffsConfig.common.mowziesStaffs.pathStaff.durability);
+        super(MysticStaffsConfig.COMMON.mowziesStaffs.pathStaff.durability);
     }
 
     /**
@@ -39,8 +39,8 @@ public class PathStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.mowziesStaffs.pathStaff.featherConsumption)) {
-            for (int i = 0; i < MysticStaffsConfig.common.mowziesStaffs.pathStaff.length; i++) {
+        if (!world.isRemote && (!IS_ELENAI_DODGE_2_LOADED || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.COMMON.mowziesStaffs.pathStaff.featherConsumption)) {
+            for (int i = 0; i < MysticStaffsConfig.COMMON.mowziesStaffs.pathStaff.length; i++) {
                 final double yaw = Math.toRadians(player.rotationYaw);
                 double pitch = Math.toRadians(player.rotationPitch);
 
@@ -68,14 +68,14 @@ public class PathStaff extends Staff {
 
                 EntityBoulder boulder = new EntityBoulder(world, player, 0, Blocks.ICE.getDefaultState());
 
-                boulder.setDeathTime(MysticStaffsConfig.common.mowziesStaffs.pathStaff.lifetime);
+                boulder.setDeathTime(MysticStaffsConfig.COMMON.mowziesStaffs.pathStaff.lifetime);
                 boulder.setPosition(player.posX + x * distance, (player.posY - yOffset) + y * distance, player.posZ + z * distance);
 
                 if (!world.getBlockState(boulder.getPosition()).getMaterial().isSolid())
                     boulderQueue.add(boulder);
             }
 
-            return useItem(itemStack, player, MysticStaffsConfig.common.mowziesStaffs.pathStaff.cooldown, MysticStaffsConfig.common.mowziesStaffs.pathStaff.featherConsumption);
+            return useItem(itemStack, player, MysticStaffsConfig.COMMON.mowziesStaffs.pathStaff.cooldown, MysticStaffsConfig.COMMON.mowziesStaffs.pathStaff.featherConsumption);
         }
 
         player.swingArm(hand);

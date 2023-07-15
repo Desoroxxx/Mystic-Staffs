@@ -15,7 +15,7 @@ import net.minecraft.world.WorldServer;
 public class InvisibilityStaff extends Staff {
 
     public InvisibilityStaff() {
-        super(MysticStaffsConfig.common.invisibilityStaff.durability);
+        super(MysticStaffsConfig.COMMON.invisibilityStaff.durability);
     }
 
     /**
@@ -27,14 +27,14 @@ public class InvisibilityStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.invisibilityStaff.featherConsumption)) {
-            player.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, MysticStaffsConfig.common.invisibilityStaff.duration));
+        if (!world.isRemote && (!IS_ELENAI_DODGE_2_LOADED || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.COMMON.invisibilityStaff.featherConsumption)) {
+            player.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, MysticStaffsConfig.COMMON.invisibilityStaff.duration));
 
             world.playSound(null, player.getPosition(), SoundEvents.ENTITY_ILLAGER_CAST_SPELL, SoundCategory.PLAYERS, 1.5F, 0.8F);
 
             ((WorldServer) world).spawnParticle(EnumParticleTypes.SPELL_INSTANT, player.posX, player.posY, player.posZ, 10000, 0.6, 1.25, 0.6, 0.1);
 
-            return useItem(itemStack, player, MysticStaffsConfig.common.invisibilityStaff.cooldown, MysticStaffsConfig.common.invisibilityStaff.featherConsumption);
+            return useItem(itemStack, player, MysticStaffsConfig.COMMON.invisibilityStaff.cooldown, MysticStaffsConfig.COMMON.invisibilityStaff.featherConsumption);
         }
 
         player.swingArm(hand);

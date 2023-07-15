@@ -17,9 +17,9 @@ import net.minecraftforge.fml.common.Loader;
  */
 public class Staff extends Item {
 
-    public static final boolean isElenaiDodge2Loaded = Loader.isModLoaded("elenaidodge2");
+    public static final boolean IS_ELENAI_DODGE_2_LOADED = Loader.isModLoaded("elenaidodge2");
 
-    public static final StaffsTab staffsTab = new StaffsTab();
+    public static final StaffsTab STAFFS_TAB = new StaffsTab();
 
     private final int durability;
 
@@ -29,7 +29,7 @@ public class Staff extends Item {
      * @param durabilityInput The durability value for the staff
      */
     protected Staff(final int durabilityInput) {
-        setCreativeTab(staffsTab);
+        setCreativeTab(STAFFS_TAB);
 
         maxStackSize = 1;
 
@@ -51,7 +51,7 @@ public class Staff extends Item {
      * @return An ActionResult object containing the result of the action and the modified ItemStack
      */
     protected ActionResult<ItemStack> useItem(ItemStack itemStack, EntityPlayer player, int cooldown, int featherConsumption) {
-        if (isElenaiDodge2Loaded)
+        if (IS_ELENAI_DODGE_2_LOADED)
             FeathersHelper.decreaseFeathers((EntityPlayerMP) player, featherConsumption);
 
         player.getCooldownTracker().setCooldown(this, cooldown);

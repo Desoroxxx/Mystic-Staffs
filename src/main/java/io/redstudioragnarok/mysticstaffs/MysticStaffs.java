@@ -24,32 +24,32 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //                /$$  | $$
 //               |  $$$$$$/
 //                \______/
-@Mod(modid = ModReference.id, name = ModReference.name, version = ModReference.version)
+@Mod(modid = ModReference.ID, name = ModReference.NAME, version = ModReference.VERSION)
 @Mod.EventBusSubscriber
 public class MysticStaffs {
 
-    public static final boolean isMowziesMobsLoaded = Loader.isModLoaded("mowziesmobs");
+    public static final boolean IS_MOWZIES_MOBS_LOADED = Loader.isModLoaded("mowziesmobs");
 
     public static Item pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff, invisibilityStaff, healStaff, fireStaff, windStaff, flightStaff, glowStaff;
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> itemRegistryEvent) {
-        invisibilityStaff = new InvisibilityStaff().setTranslationKey("invisibility_staff").setRegistryName(ModReference.id, "invisibility_staff");
-        healStaff = new HealStaff().setTranslationKey("heal_staff").setRegistryName(ModReference.id, "heal_staff");
-        fireStaff = new FireStaff().setTranslationKey("fire_staff").setRegistryName(ModReference.id, "fire_staff");
-        windStaff = new WindStaff().setTranslationKey("wind_staff").setRegistryName(ModReference.id, "wind_staff");
-        flightStaff = new FlightStaff().setTranslationKey("flight_staff").setRegistryName(ModReference.id, "flight_staff");
-        glowStaff = new GlowStaff().setTranslationKey("glow_staff").setRegistryName(ModReference.id, "glow_staff");
+        invisibilityStaff = new InvisibilityStaff().setTranslationKey("invisibility_staff").setRegistryName(ModReference.ID, "invisibility_staff");
+        healStaff = new HealStaff().setTranslationKey("heal_staff").setRegistryName(ModReference.ID, "heal_staff");
+        fireStaff = new FireStaff().setTranslationKey("fire_staff").setRegistryName(ModReference.ID, "fire_staff");
+        windStaff = new WindStaff().setTranslationKey("wind_staff").setRegistryName(ModReference.ID, "wind_staff");
+        flightStaff = new FlightStaff().setTranslationKey("flight_staff").setRegistryName(ModReference.ID, "flight_staff");
+        glowStaff = new GlowStaff().setTranslationKey("glow_staff").setRegistryName(ModReference.ID, "glow_staff");
 
         itemRegistryEvent.getRegistry().registerAll(invisibilityStaff, healStaff, fireStaff, windStaff, flightStaff, glowStaff);
 
-        if (!isMowziesMobsLoaded)
+        if (!IS_MOWZIES_MOBS_LOADED)
             return;
 
-        pathStaff = new PathStaff().setTranslationKey("path_staff").setRegistryName(ModReference.id, "path_staff");
-        iceBallStaff = new IceBallStaff().setTranslationKey("ice_ball_staff").setRegistryName(ModReference.id, "ice_ball_staff");
-        sunstrikeStaff = new SunstrikeStaff().setTranslationKey("sunstrike_staff").setRegistryName(ModReference.id, "sunstrike_staff");
-        solarBeamStaff = new SolarBeamStaff().setTranslationKey("solar_beam_staff").setRegistryName(ModReference.id, "solar_beam_staff");
+        pathStaff = new PathStaff().setTranslationKey("path_staff").setRegistryName(ModReference.ID, "path_staff");
+        iceBallStaff = new IceBallStaff().setTranslationKey("ice_ball_staff").setRegistryName(ModReference.ID, "ice_ball_staff");
+        sunstrikeStaff = new SunstrikeStaff().setTranslationKey("sunstrike_staff").setRegistryName(ModReference.ID, "sunstrike_staff");
+        solarBeamStaff = new SolarBeamStaff().setTranslationKey("solar_beam_staff").setRegistryName(ModReference.ID, "solar_beam_staff");
 
         itemRegistryEvent.getRegistry().registerAll(pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff);
     }
@@ -64,7 +64,7 @@ public class MysticStaffs {
         ModelLoader.setCustomModelResourceLocation(flightStaff, 0, new ModelResourceLocation(flightStaff.delegate.name(), "inventory"));
         ModelLoader.setCustomModelResourceLocation(glowStaff, 0, new ModelResourceLocation(glowStaff.delegate.name(), "inventory"));
 
-        if (!isMowziesMobsLoaded)
+        if (!IS_MOWZIES_MOBS_LOADED)
             return;
 
         ModelLoader.setCustomModelResourceLocation(pathStaff, 0, new ModelResourceLocation(pathStaff.delegate.name(), "inventory"));

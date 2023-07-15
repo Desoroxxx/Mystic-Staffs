@@ -17,7 +17,7 @@ import java.util.Random;
  */
 public class MysticStaffsUtils {
 
-    public static final Random random = new Random();
+    public static final Random RANDOM = new Random();
 
     /**
      * Spawns an explosion particle effect around the given entity in the world.
@@ -27,10 +27,10 @@ public class MysticStaffsUtils {
      */
     public static void spawnExplosionParticleAtEntity(final Entity entity, final int amount) {
         // Generate random values for particle velocity and offsets in each axis
-        final double velocity = random.nextGaussian() / 8;
-        final double xOffset = random.nextGaussian() / 12;
-        final double yOffset = random.nextGaussian() / 12;
-        final double zOffset = random.nextGaussian() / 12;
+        final double velocity = RANDOM.nextGaussian() / 8;
+        final double xOffset = RANDOM.nextGaussian() / 12;
+        final double yOffset = RANDOM.nextGaussian() / 12;
+        final double zOffset = RANDOM.nextGaussian() / 12;
 
         // Spawn explosion particles around the entity with the specified amount and random offsets and velocity
         ((WorldServer) entity.getEntityWorld()).spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, entity.posX, entity.posY, entity.posZ, amount, xOffset, yOffset, zOffset, MathHelper.clamp(velocity, 0.06, 1));
@@ -58,7 +58,7 @@ public class MysticStaffsUtils {
         final float sinPitch = MathHelper.sin(-pitch * 0.017453292F);
 
         // Get the reach multiplier from the configuration
-        final float reachMultiplier = MysticStaffsConfig.common.mowziesStaffs.sunstrikeStaff.reachMultiplier;
+        final float reachMultiplier = MysticStaffsConfig.COMMON.mowziesStaffs.sunstrikeStaff.reachMultiplier;
 
         // Calculate the end position of the ray trace using the player's rotation and reach multiplier
         final Vec3d endPosition = startPosition.add((sinYaw * cosPitch) * reachMultiplier, sinPitch * reachMultiplier, (cosYaw * cosPitch) * reachMultiplier);

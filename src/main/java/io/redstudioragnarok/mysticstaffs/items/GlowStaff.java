@@ -18,7 +18,7 @@ public class GlowStaff extends Staff {
     private static final SoundEvent glow = new SoundEvent(new ResourceLocation("mysticstaffs", "glow"));
 
     public GlowStaff() {
-        super(MysticStaffsConfig.common.glowStaff.durability);
+        super(MysticStaffsConfig.COMMON.glowStaff.durability);
     }
 
     /**
@@ -30,17 +30,17 @@ public class GlowStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.glowStaff.featherConsumption)) {
-            final int range = MysticStaffsConfig.common.glowStaff.range;
+        if (!world.isRemote && (!IS_ELENAI_DODGE_2_LOADED || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.COMMON.glowStaff.featherConsumption)) {
+            final int range = MysticStaffsConfig.COMMON.glowStaff.range;
 
             for (EntityLivingBase nearbyLivingEntity : world.getEntitiesWithinAABB(EntityLivingBase.class, new AxisAlignedBB(player.posX - range, player.posY - range, player.posZ - range, player.posX + range, player.posY + range, player.posZ + range)))
-                nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.GLOWING, MysticStaffsConfig.common.glowStaff.duration, 0));
+                nearbyLivingEntity.addPotionEffect(new PotionEffect(MobEffects.GLOWING, MysticStaffsConfig.COMMON.glowStaff.duration, 0));
 
             world.playSound(null, player.getPosition(), glow, SoundCategory.PLAYERS, 1.5F, 0.5F);
 
             ((WorldServer) world).spawnParticle(EnumParticleTypes.SPELL_INSTANT, player.posX, player.posY - 1.25, player.posZ, 10000, 10, 5, 10, 0F);
 
-            return useItem(itemStack, player, MysticStaffsConfig.common.glowStaff.cooldown, MysticStaffsConfig.common.glowStaff.featherConsumption);
+            return useItem(itemStack, player, MysticStaffsConfig.COMMON.glowStaff.cooldown, MysticStaffsConfig.COMMON.glowStaff.featherConsumption);
         }
 
         player.swingArm(hand);

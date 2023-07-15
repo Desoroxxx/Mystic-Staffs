@@ -8,10 +8,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @SuppressWarnings("CanBeFinal")
-@Config(modid = ModReference.id, name = ModReference.name)
+@Config(modid = ModReference.ID, name = ModReference.NAME)
 public class MysticStaffsConfig {
 
-    public static final Common common = new Common();
+    public static final Common COMMON = new Common();
 
     public static class Common {
 
@@ -153,12 +153,12 @@ public class MysticStaffsConfig {
         }
     }
 
-    @Mod.EventBusSubscriber(modid = ModReference.id)
+    @Mod.EventBusSubscriber(modid = ModReference.ID)
     private static class EventHandler {
         @SubscribeEvent
         public static void onConfigChanged(final ConfigChangedEvent.OnConfigChangedEvent onConfigChangedEvent) {
-            if (onConfigChangedEvent.getModID().equals(ModReference.id))
-                ConfigManager.sync(ModReference.id, Config.Type.INSTANCE);
+            if (onConfigChangedEvent.getModID().equals(ModReference.ID))
+                ConfigManager.sync(ModReference.ID, Config.Type.INSTANCE);
         }
     }
 }

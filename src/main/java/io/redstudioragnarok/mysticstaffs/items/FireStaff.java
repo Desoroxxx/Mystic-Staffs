@@ -15,7 +15,7 @@ import net.minecraft.world.WorldServer;
 public class FireStaff extends Staff {
 
     public FireStaff() {
-        super(MysticStaffsConfig.common.fireStaff.durability);
+        super(MysticStaffsConfig.COMMON.fireStaff.durability);
     }
 
     /**
@@ -27,13 +27,13 @@ public class FireStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.fireStaff.featherConsumption)) {
+        if (!world.isRemote && (!IS_ELENAI_DODGE_2_LOADED || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.COMMON.fireStaff.featherConsumption)) {
 
-            final int range = MysticStaffsConfig.common.fireStaff.range;
+            final int range = MysticStaffsConfig.COMMON.fireStaff.range;
 
             for (EntityLivingBase nearbyLivingEntity : world.getEntitiesWithinAABB(EntityLivingBase.class, new AxisAlignedBB(player.posX - range, player.posY - range, player.posZ - range, player.posX + range, player.posY + range, player.posZ + range))) {
                 if (nearbyLivingEntity != player) {
-                    if (MysticStaffsConfig.common.fireStaff.ignitePlayers && nearbyLivingEntity instanceof EntityPlayer)
+                    if (MysticStaffsConfig.COMMON.fireStaff.ignitePlayers && nearbyLivingEntity instanceof EntityPlayer)
                         continue;
 
                     nearbyLivingEntity.setFire(5);
@@ -44,7 +44,7 @@ public class FireStaff extends Staff {
 
             ((WorldServer) world).spawnParticle(EnumParticleTypes.FLAME, player.posX, player.posY - 0.5, player.posZ, 25000, 3.3, 0.5, 3.3, 0.1);
 
-            return useItem(itemStack, player, MysticStaffsConfig.common.fireStaff.cooldown, MysticStaffsConfig.common.fireStaff.featherConsumption);
+            return useItem(itemStack, player, MysticStaffsConfig.COMMON.fireStaff.cooldown, MysticStaffsConfig.COMMON.fireStaff.featherConsumption);
         }
 
         player.swingArm(hand);

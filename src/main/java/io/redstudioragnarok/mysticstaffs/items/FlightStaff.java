@@ -13,10 +13,10 @@ import net.minecraft.world.WorldServer;
 
 public class FlightStaff extends Staff {
 
-    private static final SoundEvent gust = new SoundEvent(new ResourceLocation("mysticstaffs", "gust"));
+    private static final SoundEvent GUST = new SoundEvent(new ResourceLocation("mysticstaffs", "gust"));
 
     public FlightStaff() {
-        super(MysticStaffsConfig.common.flightStaff.durability);
+        super(MysticStaffsConfig.COMMON.flightStaff.durability);
     }
 
 
@@ -29,14 +29,14 @@ public class FlightStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.flightStaff.featherConsumption)) {
-            MysticStaffsUtils.launchPlayerInDirection(player, MysticStaffsConfig.common.flightStaff.forwardStrength, MysticStaffsConfig.common.flightStaff.upwardStrength);
+        if (!world.isRemote && (!IS_ELENAI_DODGE_2_LOADED || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.COMMON.flightStaff.featherConsumption)) {
+            MysticStaffsUtils.launchPlayerInDirection(player, MysticStaffsConfig.COMMON.flightStaff.forwardStrength, MysticStaffsConfig.COMMON.flightStaff.upwardStrength);
 
-            world.playSound(null, player.getPosition(), gust, SoundCategory.PLAYERS, 1.2F, 0.6F);
+            world.playSound(null, player.getPosition(), GUST, SoundCategory.PLAYERS, 1.2F, 0.6F);
 
             ((WorldServer) world).spawnParticle(EnumParticleTypes.SNOW_SHOVEL, player.posX, player.posY -1.25, player.posZ, 10000, 0.55, 3.0, 0.55, 0.01);
 
-            return useItem(itemStack, player, MysticStaffsConfig.common.flightStaff.cooldown, MysticStaffsConfig.common.flightStaff.featherConsumption);
+            return useItem(itemStack, player, MysticStaffsConfig.COMMON.flightStaff.cooldown, MysticStaffsConfig.COMMON.flightStaff.featherConsumption);
         }
 
         player.swingArm(hand);

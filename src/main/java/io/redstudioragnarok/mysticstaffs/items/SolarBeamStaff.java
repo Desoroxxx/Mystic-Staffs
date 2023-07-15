@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 public class SolarBeamStaff extends Staff {
 
     public SolarBeamStaff() {
-        super(MysticStaffsConfig.common.mowziesStaffs.solarBeamStaff.durability);
+        super(MysticStaffsConfig.COMMON.mowziesStaffs.solarBeamStaff.durability);
     }
 
     /**
@@ -30,12 +30,12 @@ public class SolarBeamStaff extends Staff {
     public ActionResult<ItemStack> onItemRightClick(final World world, final EntityPlayer player, final EnumHand hand) {
         ItemStack itemStack = player.getHeldItem(hand);
 
-        if (!world.isRemote && (!isElenaiDodge2Loaded || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.common.mowziesStaffs.solarBeamStaff.featherConsumption)) {
+        if (!world.isRemote && (!IS_ELENAI_DODGE_2_LOADED || FeathersHelper.getFeatherLevel((EntityPlayerMP) player) >= MysticStaffsConfig.COMMON.mowziesStaffs.solarBeamStaff.featherConsumption)) {
             MowziesMobs.NETWORK_WRAPPER.sendToServer(new MessagePlayerSolarBeam());
 
-            player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 75, MysticStaffsConfig.common.mowziesStaffs.solarBeamStaff.slowness));
+            player.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 75, MysticStaffsConfig.COMMON.mowziesStaffs.solarBeamStaff.slowness));
 
-            return useItem(itemStack, player, MysticStaffsConfig.common.mowziesStaffs.solarBeamStaff.cooldown, MysticStaffsConfig.common.mowziesStaffs.solarBeamStaff.featherConsumption);
+            return useItem(itemStack, player, MysticStaffsConfig.COMMON.mowziesStaffs.solarBeamStaff.cooldown, MysticStaffsConfig.COMMON.mowziesStaffs.solarBeamStaff.featherConsumption);
         }
 
         player.swingArm(hand);
