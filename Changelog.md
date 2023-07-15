@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
+- Added logo to `mcmod.info`
 - Added Forge version checker for update notification
 
 ### Changed
