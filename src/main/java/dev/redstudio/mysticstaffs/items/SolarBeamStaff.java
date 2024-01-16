@@ -1,9 +1,9 @@
-package io.redstudioragnarok.mysticstaffs.items;
+package dev.redstudio.mysticstaffs.items;
 
 import com.bobmowzie.mowziesmobs.MowziesMobs;
 import com.bobmowzie.mowziesmobs.server.message.MessagePlayerSolarBeam;
 import com.elenai.elenaidodge2.api.FeathersHelper;
-import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
+import dev.redstudio.mysticstaffs.config.MysticStaffsConfig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.MobEffects;

@@ -1,4 +1,4 @@
-package io.redstudioragnarok.mysticstaffs.config;
+package dev.redstudio.mysticstaffs.config;
 
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;

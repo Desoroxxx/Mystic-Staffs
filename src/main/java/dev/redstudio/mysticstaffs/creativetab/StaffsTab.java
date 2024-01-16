@@ -1,6 +1,6 @@
-package io.redstudioragnarok.mysticstaffs.creativetab;
+package dev.redstudio.mysticstaffs.creativetab;
 
-import io.redstudioragnarok.mysticstaffs.MysticStaffs;
+import dev.redstudio.mysticstaffs.MysticStaffs;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;

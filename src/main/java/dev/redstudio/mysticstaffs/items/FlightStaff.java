@@ -1,8 +1,8 @@
-package io.redstudioragnarok.mysticstaffs.items;
+package dev.redstudio.mysticstaffs.items;
 
 import com.elenai.elenaidodge2.api.FeathersHelper;
-import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
-import io.redstudioragnarok.mysticstaffs.utils.MysticStaffsUtils;
+import dev.redstudio.mysticstaffs.config.MysticStaffsConfig;
+import dev.redstudio.mysticstaffs.utils.MysticStaffsUtils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;

@@ -1,6 +1,6 @@
-package io.redstudioragnarok.mysticstaffs.utils;
+package dev.redstudio.mysticstaffs.utils;
 
-import io.redstudioragnarok.mysticstaffs.config.MysticStaffsConfig;
+import dev.redstudio.mysticstaffs.config.MysticStaffsConfig;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.EnumParticleTypes;

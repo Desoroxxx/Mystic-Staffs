@@ -1,6 +1,6 @@
-package io.redstudioragnarok.mysticstaffs;
+package dev.redstudio.mysticstaffs;
 
-import io.redstudioragnarok.mysticstaffs.items.*;
+import dev.redstudio.mysticstaffs.items.*;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -12,7 +12,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import static dev.redstudio.mysticstaffs.ProjectConstants.*;
+import static dev.redstudio.mysticstaffs.ProjectConstants.ID;
+import static dev.redstudio.mysticstaffs.ProjectConstants.NAME;
+import static dev.redstudio.mysticstaffs.ProjectConstants.VERSION;
 
 //   /$$      /$$                       /$$     /$$                  /$$$$$$   /$$                /$$$$$$   /$$$$$$
 //  | $$$    /$$$                      | $$    |__/                 /$$__  $$ | $$               /$$__  $$ /$$__  $$
