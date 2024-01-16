@@ -25,7 +25,7 @@ import static dev.redstudio.mysticstaffs.ProjectConstants.*;
 //                /$$  | $$
 //               |  $$$$$$/
 //                \______/
-@Mod(modid = ID, name = NAME, version = VERSION, updateJSON = "https://raw.githubusercontent.com/Desoroxxx/Mystic-Staffs/main/update.json")
+@Mod(modid = ID, name = NAME, version = VERSION, updateJSON = "https://forge.curseupdate.com/856511/mystic-staffs")
 @Mod.EventBusSubscriber
 public class MysticStaffs {
 
