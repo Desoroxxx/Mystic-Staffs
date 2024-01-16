@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "dev.redstudio"
-version = "1.2-Dev-1" // Versioning must follow Ragnarök versioning convention: https://shor.cz/ragnarok_versioning_convention
+version = "1.2" // Versioning must follow Ragnarök versioning convention: https://shor.cz/ragnarok_versioning_convention
 
 val id = "mysticstaffs"
 
