@@ -86,7 +86,7 @@ public class MysticStaffsUtils {
         // Set the vertical component of the launch force
         player.motionY = upwardStrength;
 
-        // Mark the player's velocity as changed to ensure the update is processed by the client
+        // Mark the player's velocity as changed to ensure the client processes the update
         player.velocityChanged = true;
     }
 }

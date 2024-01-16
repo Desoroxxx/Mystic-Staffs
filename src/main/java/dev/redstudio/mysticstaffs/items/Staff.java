@@ -47,7 +47,7 @@ public class Staff extends Item {
      * @param itemStack The ItemStack representing the staff item being used
      * @param player The EntityPlayer using the staff item
      * @param cooldown The cooldown duration (in ticks) to apply after using the staff item
-     * @param featherConsumption The amount of feathers to consume upon using the staff item
+     * @param featherConsumption The number of feathers to consume upon using the staff item
      * @return An ActionResult object containing the result of the action and the modified ItemStack
      */
     protected ActionResult<ItemStack> useItem(ItemStack itemStack, EntityPlayer player, int cooldown, int featherConsumption) {

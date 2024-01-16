@@ -60,19 +60,23 @@ public class MysticStaffs {
     @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public static void registerRenders(final ModelRegistryEvent modelRegistryEvent) {
-        ModelLoader.setCustomModelResourceLocation(invisibilityStaff, 0, new ModelResourceLocation(invisibilityStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(healStaff, 0, new ModelResourceLocation(healStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(fireStaff, 0, new ModelResourceLocation(fireStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(windStaff, 0, new ModelResourceLocation(windStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(flightStaff, 0, new ModelResourceLocation(flightStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(glowStaff, 0, new ModelResourceLocation(glowStaff.delegate.name(), "inventory"));
+        registerItemModel(invisibilityStaff);
+        registerItemModel(healStaff);
+        registerItemModel(fireStaff);
+        registerItemModel(windStaff);
+        registerItemModel(flightStaff);
+        registerItemModel(glowStaff);
 
         if (!IS_MOWZIES_MOBS_LOADED)
             return;
 
-        ModelLoader.setCustomModelResourceLocation(pathStaff, 0, new ModelResourceLocation(pathStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(iceBallStaff, 0, new ModelResourceLocation(iceBallStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(sunstrikeStaff, 0, new ModelResourceLocation(sunstrikeStaff.delegate.name(), "inventory"));
-        ModelLoader.setCustomModelResourceLocation(solarBeamStaff, 0, new ModelResourceLocation(solarBeamStaff.delegate.name(), "inventory"));
+        registerItemModel(pathStaff);
+        registerItemModel(iceBallStaff);
+        registerItemModel(sunstrikeStaff);
+        registerItemModel(solarBeamStaff);
+    }
+
+    private static void registerItemModel(final Item item) {
+        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.delegate.name(), "inventory"));
     }
 }

@@ -44,12 +44,12 @@ public class PathStaff extends Staff {
                 final double yaw = Math.toRadians(player.rotationYaw);
                 double pitch = Math.toRadians(player.rotationPitch);
 
-                if (Math.abs(Math.toDegrees(pitch)) < 8) // Check if the pitch is in the deadzone, if true set the pitch to 0
+                if (Math.abs(Math.toDegrees(pitch)) < 8) // Check if the pitch is in the deadzone if true set the pitch to 0
                     pitch = 0;
 
-                if (pitch <= -0.85) // Check if the pitch is above the max height or under the min height, if true set the pitch to the maximum usable upward stairway
+                if (pitch <= -0.85) // Check if the pitch is above the max height or under the min height if true set the pitch to the maximum usable upward stairway
                     pitch = -0.84;
-                else if (pitch >= 0.85) // Check if the pitch is below the min height, if true set the pitch to the minimum usable downward stairway
+                else if (pitch >= 0.85) // Check if the pitch is below the min height if true set the pitch to the minimum usable downward stairway
                     pitch = 0.84;
 
                 final double x = -Math.sin(yaw) * Math.cos(pitch);
