@@ -1,7 +1,6 @@
 package io.redstudioragnarok.mysticstaffs;
 
 import io.redstudioragnarok.mysticstaffs.items.*;
-import io.redstudioragnarok.mysticstaffs.utils.ModReference;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -12,6 +11,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import static dev.redstudio.mysticstaffs.ProjectConstants.*;
 
 //   /$$      /$$                       /$$     /$$                  /$$$$$$   /$$                /$$$$$$   /$$$$$$
 //  | $$$    /$$$                      | $$    |__/                 /$$__  $$ | $$               /$$__  $$ /$$__  $$
@@ -24,7 +25,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 //                /$$  | $$
 //               |  $$$$$$/
 //                \______/
-@Mod(modid = ModReference.ID, name = ModReference.NAME, version = ModReference.VERSION, updateJSON = "https://raw.githubusercontent.com/Desoroxxx/Mystic-Staffs/main/update.json")
+@Mod(modid = ID, name = NAME, version = VERSION, updateJSON = "https://raw.githubusercontent.com/Desoroxxx/Mystic-Staffs/main/update.json")
 @Mod.EventBusSubscriber
 public class MysticStaffs {
 
@@ -34,22 +35,22 @@ public class MysticStaffs {
 
     @SubscribeEvent
     public static void registerItems(final RegistryEvent.Register<Item> itemRegistryEvent) {
-        invisibilityStaff = new InvisibilityStaff().setTranslationKey("invisibility_staff").setRegistryName(ModReference.ID, "invisibility_staff");
-        healStaff = new HealStaff().setTranslationKey("heal_staff").setRegistryName(ModReference.ID, "heal_staff");
-        fireStaff = new FireStaff().setTranslationKey("fire_staff").setRegistryName(ModReference.ID, "fire_staff");
-        windStaff = new WindStaff().setTranslationKey("wind_staff").setRegistryName(ModReference.ID, "wind_staff");
-        flightStaff = new FlightStaff().setTranslationKey("flight_staff").setRegistryName(ModReference.ID, "flight_staff");
-        glowStaff = new GlowStaff().setTranslationKey("glow_staff").setRegistryName(ModReference.ID, "glow_staff");
+        invisibilityStaff = new InvisibilityStaff().setTranslationKey("invisibility_staff").setRegistryName(ID, "invisibility_staff");
+        healStaff = new HealStaff().setTranslationKey("heal_staff").setRegistryName(ID, "heal_staff");
+        fireStaff = new FireStaff().setTranslationKey("fire_staff").setRegistryName(ID, "fire_staff");
+        windStaff = new WindStaff().setTranslationKey("wind_staff").setRegistryName(ID, "wind_staff");
+        flightStaff = new FlightStaff().setTranslationKey("flight_staff").setRegistryName(ID, "flight_staff");
+        glowStaff = new GlowStaff().setTranslationKey("glow_staff").setRegistryName(ID, "glow_staff");
 
         itemRegistryEvent.getRegistry().registerAll(invisibilityStaff, healStaff, fireStaff, windStaff, flightStaff, glowStaff);
 
         if (!IS_MOWZIES_MOBS_LOADED)
             return;
 
-        pathStaff = new PathStaff().setTranslationKey("path_staff").setRegistryName(ModReference.ID, "path_staff");
-        iceBallStaff = new IceBallStaff().setTranslationKey("ice_ball_staff").setRegistryName(ModReference.ID, "ice_ball_staff");
-        sunstrikeStaff = new SunstrikeStaff().setTranslationKey("sunstrike_staff").setRegistryName(ModReference.ID, "sunstrike_staff");
-        solarBeamStaff = new SolarBeamStaff().setTranslationKey("solar_beam_staff").setRegistryName(ModReference.ID, "solar_beam_staff");
+        pathStaff = new PathStaff().setTranslationKey("path_staff").setRegistryName(ID, "path_staff");
+        iceBallStaff = new IceBallStaff().setTranslationKey("ice_ball_staff").setRegistryName(ID, "ice_ball_staff");
+        sunstrikeStaff = new SunstrikeStaff().setTranslationKey("sunstrike_staff").setRegistryName(ID, "sunstrike_staff");
+        solarBeamStaff = new SolarBeamStaff().setTranslationKey("solar_beam_staff").setRegistryName(ID, "solar_beam_staff");
 
         itemRegistryEvent.getRegistry().registerAll(pathStaff, iceBallStaff, sunstrikeStaff, solarBeamStaff);
     }

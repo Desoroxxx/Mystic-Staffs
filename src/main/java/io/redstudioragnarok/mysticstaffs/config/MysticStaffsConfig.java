@@ -1,14 +1,15 @@
 package io.redstudioragnarok.mysticstaffs.config;
 
-import io.redstudioragnarok.mysticstaffs.utils.ModReference;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import static dev.redstudio.mysticstaffs.ProjectConstants.*;
+
 @SuppressWarnings("CanBeFinal")
-@Config(modid = ModReference.ID, name = ModReference.NAME)
+@Config(modid = ID, name = NAME)
 public class MysticStaffsConfig {
 
     public static final Common COMMON = new Common();
@@ -153,12 +154,12 @@ public class MysticStaffsConfig {
         }
     }
 
-    @Mod.EventBusSubscriber(modid = ModReference.ID)
+    @Mod.EventBusSubscriber(modid = ID)
     private static class EventHandler {
         @SubscribeEvent
         public static void onConfigChanged(final ConfigChangedEvent.OnConfigChangedEvent onConfigChangedEvent) {
-            if (onConfigChangedEvent.getModID().equals(ModReference.ID))
-                ConfigManager.sync(ModReference.ID, Config.Type.INSTANCE);
+            if (onConfigChangedEvent.getModID().equals(ID))
+                ConfigManager.sync(ID, Config.Type.INSTANCE);
         }
     }
 }
