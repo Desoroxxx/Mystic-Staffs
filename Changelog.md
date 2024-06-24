@@ -15,8 +15,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - General Cleanup
 - Switched to [CurseUpdate](https://forge.curseupdate.com/) for update checking
 - Switched from [RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle) tags to [gmazzo](https://github.com/gmazzo) [gradle-buildconfig-plugin](https://github.com/gmazzo/gradle-buildconfig-plugin)
-- Switched to Gradle Kotlin DSL
-- Updated to Gradle 8.5
+- Switched to [Gradle](https://gradle.org) Kotlin DSL
+- Updated to [Gradle](https://gradle.org) 8.5
 
 ## Mystic Staffs 1.1 - 2023-7-16
 
@@ -37,4 +37,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Changed constant names to follow Java conventions
 - Switched to standard RSR buildscript
-- Removed embedded Jafama
+- Removed embedded [Jafama](https://github.com/jeffhain/jafama)
