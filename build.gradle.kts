@@ -13,6 +13,7 @@ plugins {
 group = "dev.redstudio"
 version = "1.2" // Versioning must follow Ragnarök versioning convention: https://shor.cz/ragnarok_versioning_convention
 
+val name = "Mystic Staffs"
 val id = "mysticstaffs"
 
 minecraft {
@@ -41,11 +42,11 @@ dependencies {
 buildConfig {
     packageName("${project.group}.${id}")
     className("ProjectConstants")
-    documentation.set("This class defines constants for ${project.name}.\n<p>\nThey are automatically updated by Gradle.")
+    documentation.set("This class defines constants for ${name}.\n<p>\nThey are automatically updated by Gradle.")
 
     useJavaOutput()
     buildConfigField("String", "ID", provider { """"${id}"""" })
-    buildConfigField("String", "NAME", provider { "\"Mystic Staffs\"" })
+    buildConfigField("String", "NAME", provider { """"${name}"""" })
     buildConfigField("String", "VERSION", provider { """"${project.version}"""" })
     buildConfigField("org.apache.logging.log4j.Logger", "LOGGER", "org.apache.logging.log4j.LogManager.getLogger(NAME)")
 }
