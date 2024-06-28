@@ -5,7 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com),
 and this project follows the [Ragnarök Versioning Convention](https://github.com/Red-Studio-Ragnarok/Commons/blob/main/Ragnar%C3%B6k%20Versioning%20Convention.md).
 
-## Mystic Staffs 1.3 - 2024-01-29
+## Mystic Staffs 20 - 2024-06-28
+
+### Changed
+
+- Changed all the textures of the mod
 
 ### Internal
 
