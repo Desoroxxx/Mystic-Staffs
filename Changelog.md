@@ -7,6 +7,10 @@ and this project follows the [Ragnarök Versioning Convention](https://github.co
 
 ## Mystic Staffs 2.0.2 - 2024-08-06
 
+### Fixed
+
+- Fixed update checking
+
 ### Internal
 
 - Updated to [Gradle](https://gradle.org) 8.9 
