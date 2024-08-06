@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com),
 and this project follows the [Ragnarök Versioning Convention](https://github.com/Red-Studio-Ragnarok/Commons/blob/main/Ragnar%C3%B6k%20Versioning%20Convention.md).
 
+## Mystic Staffs 2.0.2 - 2024-08-06
+
+### Internal
+
+- Updated to [Gradle](https://gradle.org) 8.9 
+
 ## Mystic Staffs 2.0.1 - 2024-07-04
 
 ### Fixed
