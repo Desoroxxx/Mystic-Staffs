@@ -107,14 +107,6 @@ tasks.processResources.configure {
     }
 }
 
-tasks.named<Jar>("jar") {
-    manifest {
-        attributes(
-            "ModSide" to "CLIENT",
-        )
-    }
-}
-
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
     options.isFork = true
