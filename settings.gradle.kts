@@ -1,4 +1,4 @@
-rootProject.name = "Mystic-Staffs"
+rootProject.name = "Mystic Staffs"
 
 pluginManagement {
     repositories {

@@ -16,6 +16,7 @@ and this project follows the [Ragnarök Versioning Convention](https://github.co
 - Updated to [gradle-buildconfig-plugin](https://github.com/gmazzo/gradle-buildconfig-plugin) 5.4.0
 - Updated to [io.freefair.lombok](https://plugins.gradle.org/plugin/io.freefair.lombok) 8.7.1
 - Updated to [RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle) 1.4.1
+- Cleaned up the buildscript
 
 ## Mystic Staffs 2.0.2 - 2024-08-06
 
