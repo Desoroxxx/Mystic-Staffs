@@ -106,6 +106,10 @@ tasks.processResources.configure {
     }
 }
 
+tasks.withType<Jar>().configureEach {
+    archiveBaseName.set(archiveBaseName.get().replace(" ", "-"))
+}
+
 tasks.withType<JavaCompile>().configureEach {
     options.encoding = "UTF-8"
     options.isFork = true
